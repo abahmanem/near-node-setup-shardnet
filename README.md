@@ -26,7 +26,7 @@ For this guide, we are using a [Hetzner](https://hetzner.com) cloud server with 
 
 * [Deploy the node](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/create-wallet.md)
 
-* [Configure a staking pool](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/create-wallet.md)
+* [Configure a staking pool](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/staking-pool.md)
 
 
 ## Create your Shardnet wallet

@@ -59,7 +59,7 @@ In this section, we will learn how to create a Shardnet wallet
  ## How Setup a non root user
 
 
-In the following sections, **It's recommended** to run the commands in this guide as a non-root user
+In the following sections, **It's recommended** to run the commands  as a non-root user
     
    * Login as root and create a user
    

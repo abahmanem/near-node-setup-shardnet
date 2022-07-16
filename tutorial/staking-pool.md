@@ -21,7 +21,7 @@
 
   if successful, you will see the following :
   
-  ![node_04](assets/staking/staking_01.png "node_04") 
+  ![node_04](../assets/staking/staking_01.png "node_04") 
   
   
 
@@ -36,7 +36,7 @@
  ```
   if the staking transaction is successful , you will see the following output  :
 
-![node_04](assets/staking/staking_02.png "node_04") 
+![node_04](../assets/staking/staking_02.png "node_04") 
 
   Ping 
 
@@ -50,7 +50,7 @@
 
  if successful, you will see the following:
 
- ![node_04](assets/staking/ping_01.png "node_04") 
+ ![node_04](../assets/staking/ping_01.png "node_04") 
  
 
 

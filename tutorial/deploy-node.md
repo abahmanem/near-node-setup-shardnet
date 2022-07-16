@@ -33,7 +33,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    ```
    * Save a file and quit the editor.
 
-  quit the root session and login back using the urername you have just created (abahmane).
+  quit the root session and login back using the urername you have just created.
 
 # Deploy the node
 

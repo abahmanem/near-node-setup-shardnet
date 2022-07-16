@@ -3,7 +3,7 @@
 
 
 
-The present tutorial aims to guide us in setting up a validator node on the shardnet network through the following 3 steps:
+The present tutorial aims to guide us in setting up a running validator node on the shardnet network through the following steps:
 
 
 

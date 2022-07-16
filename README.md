@@ -7,13 +7,13 @@ The present tutorial aims to guide us in setting up a validator node on the shar
 
 
 
-* [Hardware](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/hardware.md)
+* [Hardware](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/hardware.md)
 
-* [Create a Shardnet wallet](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/create-wallet.md)
-
-
-* [Deploy the node](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/deploy-node.md)
+* [Create a Shardnet wallet](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/create-wallet.md)
 
 
-* [Configure a staking pool](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/staking-pool.md)
+* [Deploy the node](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/deploy-node.md)
+
+
+* [Configure a staking pool](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/staking-pool.md)
 

@@ -39,7 +39,7 @@ In this section, we will learn how to create a Shardnet wallet
   4-Set up you security paraphrase (seed), you should keep it for yourself and never share it. Copy the paraphrase. 
       You will be asked to verify it ine the next step
       
-       ![server](assets/wallet/wallet_04.png "server")
+   ![server](assets/wallet/wallet_04.png "server")
   
   5- You are asked to verify a given work from your secure paraphrase, enter it and press verify and complete
   

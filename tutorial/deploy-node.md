@@ -243,9 +243,10 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    2022-07-14 21:22:49 (112 MB/s) - ‘/home/abahmane/.near/config.json’ saved [3647/3647]
    ````
 
-  * Get the latest snapshot 
+  * Get the latest state snapshot 
 
   Install aws Cli
+  
   ````bash
   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo apt-get install awscli -y
   ````

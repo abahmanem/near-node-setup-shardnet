@@ -40,7 +40,9 @@
  ```
  
 
-  You have successfully  configured your Staking pool. You can now check if your node is visible on https://explorer.shardnet.near.org/nodes/validators
+  You have successfully  configured your Staking pool.
+  
+  You can now check if your node is visible on https://explorer.shardnet.near.org/nodes/validators
 
   ## Deposit and Stake NEAR test tokens
 

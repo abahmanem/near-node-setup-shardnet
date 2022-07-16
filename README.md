@@ -527,6 +527,7 @@ In the following sections, It's recommended to run the commands in this guide as
 
  if successful, you will see the following:
 
- ping_01.png
+ ![node_04](assets/staking/ping_01.png "node_04") 
+ 
 
 

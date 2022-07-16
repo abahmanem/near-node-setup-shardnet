@@ -15,9 +15,18 @@ For this guide, we are using a [Hetzner](https://hetzner.com) cloud server with 
   - 2 x 512 GB NVMe SSD (Raid1)
   - price : 36 euros/month
 
+
   ![server](assets/node/server_hetzner.png "server")
 
 
+
+
+
+* [Create a Shardnet wallet](https://github.com/abahmanem/near-node-setup-shardnet/create-wallet.md)
+
+* [Deploy the node](https://github.com/abahmanem/near-node-setup-shardnet/deploy-node.md)
+
+* [Configure a staking pool](https://github.com/abahmanem/near-node-setup-shardnet/deploy-node.md)
 
 
 ## Create your Shardnet wallet

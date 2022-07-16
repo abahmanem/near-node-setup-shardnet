@@ -4,7 +4,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
  # Setup a non-root user
 
     
-   * Login as root and create a user (abahmane) and set a password
+   * Login as root and create a user and set a password
    
    ```bash
    root@Ubuntu-2004-focal-64-minimal ~ # sudo adduser abahmane

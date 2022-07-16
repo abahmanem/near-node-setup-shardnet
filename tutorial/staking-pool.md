@@ -11,9 +11,9 @@
   
   repalace  : 
   
-  - <pool id> with your account-id monikor 
-  - <accountId> with your complete account-id, ie : xxxxx.shardnet.near
-  - <public key> with your node public key (the one in file .near/validator_key.json)
+  - **pool id**  with your account-id monikor (abahmane)
+  - **accountId** with your complete account-id, ie : abahmane.shardnet.near
+  - **public key** with your node public key (the one in file .near/validator_key.json)
 
  In our case : 
 

@@ -8,12 +8,12 @@
 These validators can mount their nodes on machines with less constraining specifications compared to a full validating node [hardware requirement](https://near-nodes.io/validator/hardware) on the Near mainnet network.
 For this guide, we are using a [Hetzner](https://hetzner.com) cloud server with the following specifications : 
 
-  - **Server AMD Ryzen™ 5 3600
-  - **CPU:  6 cores / 12 threads @ 3.6 GHz
-  - **64 GB DDR4 RAM
-  - **2 x 512 GB NVMe SSD (Raid1)
-  - **OS : Ubuntu 20.04 LTS 
-  - **Price : 36 euros/month
+  - **Server AMD Ryzen™ 5 3600**
+  - **CPU:  6 cores / 12 threads @ 3.6 GHz**
+  - **64 GB DDR4 RAM**
+  - **2 x 512 GB NVMe SSD (Raid1)**
+  - **OS : Ubuntu 20.04 LTS**
+  - **Price : 36 euros/month**
 
 
 

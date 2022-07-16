@@ -366,7 +366,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    
    Edit ~/.near/validator_key.json file and change the following :
 
-       1. “account_id” to xxxx.factory.shardnet.near, where xxxx is the Pool_Name (abahmane our case)
+       1. “account_id” to xxxx.factory.shardnet.near, where xxxx is the Pool_Name (Pool_Name=abahmane in our case)
        2. private_key to secret_key
    
   
@@ -402,7 +402,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    WantedBy=multi-user.target
   ```
   
-  repalce **<USER>** by a non-root user (abahmane)
+  repalce **<USER>** by a non-root user (<USER>=abahmane in our case)
 
   * Enable neard service 
 

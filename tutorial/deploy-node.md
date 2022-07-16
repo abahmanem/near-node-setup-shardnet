@@ -4,10 +4,10 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
  # Setup a non root user
 
     
-   * Login as root and create a user
+   * Login as root and create a user (ouiouane)
    
    ```bash
-   root@Ubuntu-2004-focal-64-minimal ~ # sudo adduser nearuser
+   root@Ubuntu-2004-focal-64-minimal ~ # sudo adduser ouiouane
     ```
     add the user to the sudoers (nano or vim)
    ```bash
@@ -20,7 +20,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    * Add the line :
 
    ```bash
-   nearuser  ALL=(ALL) NOPASSWD:ALL
+   ouiouane  ALL=(ALL) NOPASSWD:ALL
    ```
    * Save a file and quit the editor.
 

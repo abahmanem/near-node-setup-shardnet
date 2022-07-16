@@ -32,13 +32,13 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
 
   ## setup NEAR-CLI
 
-   Sync and install the newest versions of all installed packages on the linux machine
+   * Sync and install the newest versions of all installed packages on the linux machine
 
    ```bash
    abahmane@Ubuntu-2004-focal-64-minimal:~$ sudo apt update && sudo apt upgrade -y
    ```
 
-   Install Node.js and npm
+    * Install Node.js and npm
 
    ```bash
    curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -  
@@ -46,7 +46,8 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    PATH="$PATH"
    ```
 
-  Check Node.js and npm versions:
+   * Check Node.js and npm versions:
+   *
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ node -v
   v18.6.0
@@ -57,13 +58,13 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   8.13.2   
   ```
 
-  Install NEAR-CLI
+   * Install NEAR-CLI
+   
   ```bash
    abahmane@Ubuntu-2004-focal-64-minimal:~$ sudo npm install -g near-cli
   ```
 
-  Set Network to Shardnet
-  In order to make it persistent, add it to ~/.bashrc.
+   * Set Network to Shardnet, in order to make it persistent, add it to ~/.bashrc.
   
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ echo 'export NEAR_ENV=shardnet' >> ~/.bashrc
@@ -76,7 +77,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   abahmane@Ubuntu-2004-focal-64-minimal:~$ near validators current 
   ```   
    
-  lists the current validators set  
+  Thsi command lists the current validators set :  
     
 
  ![node_01](../assets/node/node_01.png "node_01") 
@@ -87,7 +88,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
 
   #### Install dependencies  and set the configuration
     
-  first, check that you have the required hardware specifications to run a node 
+  * First, check that you have the required hardware specifications to run a node 
 
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ lscpu | grep -P '(?=.*avx )(?=.*sse4.2 )(?=.*cx16 )(?=.*popcnt )' > /dev/null \
@@ -95,31 +96,31 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   >   || echo "Not supported"
   Supported
   ```
-  Install developer tools: 
+  * Install developer tools: 
 
    ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo
   ```
-  Install Python pip
+  * Install Python pip
 
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ sudo apt install python3-pip
   ```
 
-  Set the configuration 
+  * Set the configuration 
 
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ USER_BASE_BIN=$(python3 -m site --user-base)/bin
   abahmane@Ubuntu-2004-focal-64-minimal:~$ export PATH="$USER_BASE_BIN:$PATH"
 
   ```
-  Install Building env
+  * Install Building env
   
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ sudo apt install clang build-essential make
   ```
 
-  Install Rust & Cargo
+  * Install Rust & Cargo
 
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -165,12 +166,13 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   source "$HOME/.cargo/env"
   ```
 
-  Source the environment
+  * Source the environment
+  
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ source $HOME/.cargo/env
   ``` 
 
-  Clone nearcore project from GitHub : 
+  * Clone nearcore project from GitHub : 
   
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ git clone https://github.com/near/nearcore
@@ -196,13 +198,15 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    ``` 
    The binary path is set to target/release/neard  
 
-   Initialize working directory
+   * Initialize working directory
+   
    Generate the initial required working directory and a couple of configuration files:
 
-   * config.json : contains needed information for a node to run on the network, how to communicate with peers, and how to reach consensus
-   * genesis.json : contains initial accounts, contracts, access keys, and other records which represents the initial state of the blockchain
-   * node_key.json : contains a public and private key for the node. Also includes an optional account_id parameter which is required to run a validator node.
-   * data/ : Near node state.
+    - config.json : contains needed information for a node to run on the network, how to communicate with peers, and how to reach consensus
+    - genesis.json : contains initial accounts, contracts, access keys, and other records which represents the initial state of the blockchain
+    - node_key.json : contains a public and private key for the node. Also includes an optional account_id parameter which is required to run a  
+    validator node.
+    - data/ : Near node state.
   
    Run the following command to generate working directory 
 
@@ -219,12 +223,14 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
     2022-07-14T17:20:27.082573Z  INFO near: Generated for shardnet network node key and genesis file in /home/abahmane/.near
    ```
 
-   Replace the config.json
-   in config.json, modify the 2 parameters : boot_nodes and tracked_shards
+   * Replace the config.json
+   
+   In config.json, change these two parameters : **boot_nodes** and **tracked_shards**
 
    ````bash
    abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ rm ~/.near/config.json
-   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json
+   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-
+    deploy/shardnet/config.json
    --2022-07-14 21:22:48--  https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json
    Resolving s3-us-west-1.amazonaws.com (s3-us-west-1.amazonaws.com)... 52.219.116.232
    Connecting to s3-us-west-1.amazonaws.com (s3-us-west-1.amazonaws.com)|52.219.116.232|:443... connected.
@@ -237,13 +243,13 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    2022-07-14 21:22:49 (112 MB/s) - ‘/home/abahmane/.near/config.json’ saved [3647/3647]
    ````
 
-  Get latest snapshot 
+  * Get the latest snapshot 
 
   Install aws Cli
   ````bash
   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo apt-get install awscli -y
   ````
- then
+  Then
   
   ````bash
   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ cd ~/.near
@@ -251,7 +257,8 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   tar -xzvf data.tar.gz
    ````
 
-  Run the node
+  * Run the node
+  
   You can start your node by  running the following command under nearcore folder:
   ````bash
   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$./target/release/neard --home ~/.near run
@@ -260,30 +267,32 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   
   ````bash
   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo ./target/release/neard --home ~/.near run
-  2022-07-15T19:34:43.519836Z  INFO neard: version="trunk" build="crates-0.14.0-216-g96f13d239" latest_protocol=100
-  2022-07-15T19:34:43.527357Z  INFO db: Created a new RocksDB instance. num_instances=1
-  2022-07-15T19:34:43.524828Z  INFO db: Dropped a RocksDB instance. num_instances=0
-  2022-07-15T19:34:43.527836Z  INFO near: Opening RocksDB database path=/home/abahmane/.near/data
-  2022-07-15T19:34:43.594753Z  INFO db: Created a new RocksDB instance. num_instances=1
-  2022-07-15T19:34:43.612921Z  INFO near_network::peer_manager::peer_manager_actor: Bandwidth stats total_bandwidth_used_by_all_peers=0 total_msg_received_count=0 max_max_record_num_messages_in_progress=0
-  2022-07-15T19:34:43.620805Z  INFO stats: #  941069 Waiting for peers 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 0%, Mem: 60.1 MB
-  2022-07-15T19:34:43.620858Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
-  2022-07-15T19:34:53.621893Z  INFO stats: #  941069 Waiting for peers 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 92%, Mem: 155 MB
-  2022-07-15T19:34:53.621944Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
-  2022-07-15T19:35:03.622780Z  INFO stats: #  941069 Downloading headers 1.73% (29355 left; at 941585) 5 peers ⬇ 109 kB/s ⬆ 109 kB/s 0.00 bps 0 gas/s CPU: 51%, Mem: 278 MB
-  2022-07-15T19:35:03.622832Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
-  2022-07-15T19:35:15.148486Z  INFO stats: #  941069 Downloading headers 3.45% (28843 left; at 942101) 7 peers ⬇ 349 kB/s ⬆ 328 kB/s 0.00 bps 0 gas/s CPU: 52%, Mem: 318 MB
-  2022-07-15T19:35:15.148520Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
-  2022-07-15T19:35:27.476642Z  INFO stats: #  941069 Downloading headers 6.90% (27821 left; at 943131) 8 peers ⬇ 596 kB/s ⬆ 493 kB/s 0.00 bps 0 gas/s CPU: 48%, Mem: 291 MB
-  2022-07-15T19:35:27.476676Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
-  2022-07-15T19:35:37.478760Z  INFO stats: #  941069 Downloading headers 12.09% (26284 left; at 944684) 9 peers ⬇ 780 kB/s ⬆ 551 kB/s 0.00 bps 0 gas/s CPU: 60%, Mem: 320 MB
-  2022-07-15T19:35:37.478812Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-14T21:29:49.419836Z  INFO neard: version="trunk" build="crates-0.14.0-216-g96f13d239" latest_protocol=100
+  2022-07-14T21:29:49.427357Z  INFO db: Created a new RocksDB instance. num_instances=1
+  2022-07-14T21:29:49.424828Z  INFO db: Dropped a RocksDB instance. num_instances=0
+  2022-07-14T21:29:49.427836Z  INFO near: Opening RocksDB database path=/home/abahmane/.near/data
+  2022-07-14T21:29:49.494753Z  INFO db: Created a new RocksDB instance. num_instances=1
+  2022-07-14T21:29:49.512921Z  INFO near_network::peer_manager::peer_manager_actor: Bandwidth stats total_bandwidth_used_by_all_peers=0 total_msg_received_count=0 max_max_record_num_messages_in_progress=0
+  2022-07-14T21:29:49.520805Z  INFO stats: #  941069 Waiting for peers 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 0%, Mem: 60.1 MB
+  2022-07-14T21:29:49.520858Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-14T21:29:49.521893Z  INFO stats: #  941069 Waiting for peers 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 92%, Mem: 155 MB
+  2022-07-14T21:29:49.521944Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-15T21:29:49.522780Z  INFO stats: #  941069 Downloading headers 1.73% (29355 left; at 941585) 5 peers ⬇ 109 kB/s ⬆ 109 kB/s 0.00 bps 0 gas/s CPU: 51%, Mem: 278 MB
+  2022-07-14T21:29:49.522832Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-14T21:29:50.148486Z  INFO stats: #  941069 Downloading headers 3.45% (28843 left; at 942101) 7 peers ⬇ 349 kB/s ⬆ 328 kB/s 0.00 bps 0 gas/s CPU: 52%, Mem: 318 MB
+  2022-07-14T21:29:50.148520Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-15T21:29:50.476642Z  INFO stats: #  941069 Downloading headers 6.90% (27821 left; at 943131) 8 peers ⬇ 596 kB/s ⬆ 493 kB/s 0.00 bps 0 gas/s CPU: 48%, Mem: 291 MB
+  2022-07-14T21:29:50.476676Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-15T21:29:50.478761Z  INFO stats: #  941069 Downloading headers 12.09% (26284 left; at 944684) 9 peers ⬇ 780 kB/s ⬆ 551 kB/s 0.00 bps 0 gas/s CPU: 60%, Mem: 320 MB
+  2022-07-14T21:29:50.478812Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
   ````
 
-  Authorize Wallet Locally  
+  * Authorize Wallet Locally
+  
   in order to run  transactions via NEAR-CLI, a full access key needs to be installed locally.
 
-  run the command : 
+  Run the command : 
+   
    ````bash
     abahmane@Ubuntu-2004-focal-64-minimal:~$ near login
    ````
@@ -307,15 +316,13 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   Enter it here (if not redirected automatically):
 
   ```
-  Copy the url and paste it to you browser
-  Grant Access to Near CLI
+  Copy the url and paste it to you browser and  Grant Access to Near CLI
   
   ![node_02](../assets/node/node_02.png "node_02") 
   
   ![node_03](../assets/node/node_03.png "node_03") 
     
  
-
   After granting access you will see this page:
 
   ![node_04](../assets/node/node_04.png "node_04") 
@@ -329,20 +336,21 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   Logged in as [ abahmane.shardnet.near ] with public key [ ed25519:ATjazw... ] successfully
  ````
 
- Check the validator_key.json
- Run the following command :
+ * Check the validator_key.json
+  
+  Run the following command :
 
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ cat ~/.near/validator_key.json
   cat: /home/abahmane/.near/validator_key.json: No such file or directory
   ```
-   If the file is not present, generate one like this :
+  If the file is not present, generate one like this :
 
    ```bash
     near generate-key <pool_id> , (pool_id = account-id = abahmane in our case)
    ```
 
-   Copy the file generated to shardnet folder and be sure to replace <pool_id> by your accountId
+  Copy the file generated to shardnet folder and be sure to replace <pool_id> by your accountId
    
    ```bash
    abahmane@Ubuntu-2004-focal-64-minimal:~$ cp ~/.near-credentials/shardnet/abahmane.json ~/.near/validator_key.json
@@ -353,12 +361,14 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    - “account_id” : xxxx.factory.shardnet.near, where xxxx is the PoolName (abahmane our case)
    - private_key to secret_key
    
-   Start the node
-   ```bash
+  
+  * Start the node
+  
+  ```bash
    abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ target/release/neard run
    ```
 
-   Install the node Service 
+  * Install the node Service 
  
    ```bash
     abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo vi /etc/systemd/system/neard.service
@@ -386,13 +396,13 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   
   repalce **<USER>** by a non-root user (abahmane)
 
-  Enable neard service 
+  * Enable neard service 
 
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo systemctl enable neard
   ```
   
- Start the node
+  * Start the node
   
   ```bash 
   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo systemctl start neard
@@ -403,12 +413,14 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~/.near$ journalctl -n 100 -f -u neard
   ```
-  Which will give the following output:
+ 
+ Which will show the following output:
   
   ![node_04](../assets/node/node_logs_01.png "node_04") 
   
   
-  You can install ccze to print pretty logs
+  You can install bundle 'ccze' to print pretty logs
+ 
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~/.near$ sudo apt install ccze
   ```
@@ -417,7 +429,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   ```bash
    abahmane@Ubuntu-2004-focal-64-minimal:~/.near$ journalctl -n 100 -f -u neard | ccze -A
   ```
-  will print the following
+  will print the following logs:
 
   ![node_04](../assets/node/node_logs_02.png "node_04") 
 

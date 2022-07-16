@@ -2,11 +2,13 @@
 # Configure a staking pool
 
  ## Deploy a Staking Pool Contract
-  create a new staking pool with the specified name, and deploys it to the indicated accountId by calling the staking pool factory
+  
+  Create a new staking pool with the specified name, and deploys it to the indicated accountId by calling the staking pool factory
 
   ```bash
   near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "<pool id>", "owner_id": "<accountId>", "stake_public_key": "<public key>", "reward_fee_fraction": {"numerator": 5, "denominator": 100}, "code_hash":"DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ"}' --accountId="<accountId>" --amount=30 --gas=300000000000000
   ```
+  
   repalace  : 
   
   - <pool id> with your account-id monikor 
@@ -16,7 +18,7 @@
  In our case : 
 
   ```bash
-  near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "ouiouane-01", "owner_id": "ouiouane-01.shardnet.near", "stake_public_key": "ed25519:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", "reward_fee_fraction": {"numerator": 3, "denominator": 100}, "code_hash":"DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ"}' --accountId="ouiouane-01.shardnet.near" --amount=30 --gas=300000000000000
+  near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "abahmane", "owner_id": "abahmane.shardnet.near", "stake_public_key": "ed25519:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", "reward_fee_fraction": {"numerator": 3, "denominator": 100}, "code_hash":"DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ"}' --accountId="abahmane.shardnet.near" --amount=30 --gas=300000000000000
   ```
 
   if successful, you will see the following :
@@ -32,7 +34,7 @@
   You can stake to your node by running the following command :
 
  ```bash
-   ouiouane@Ubuntu-2004-focal-64-minimal:~/nearcore$ near call ouiouane-01.factory.shardnet.near deposit_and_stake --amount 1395 --accountId ouiouane-01.shardnet.near --gas=300000000000000
+   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ near call abahmane.factory.shardnet.near deposit_and_stake --amount 1395 --accountId abahmane.shardnet.near --gas=300000000000000
  ```
   if the staking transaction is successful , you will see the following output  :
 
@@ -45,7 +47,7 @@
  to run a ping, use the following command:
 
    ```bash
-   ouiouane@Ubuntu-2004-focal-64-minimal:~/nearcore$ near call ouiouane-01.factory.shardnet.near ping '{}' --accountId ouiouane-01.shardnet.near --gas=300000000000000
+   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ near call abahmane.factory.shardnet.near ping '{}' --accountId abahmane.shardnet.near --gas=300000000000000
    ```
 
  
@@ -56,16 +58,11 @@
  You can add a crontab job to do a ping every half-epoch (3 hours) :
  
  ```bash
- ouiouane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo crontab -e
+ abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo crontab -e
  ```
  
  Add the job to the end of file :
  
   ```bash
- 0 */1 * * * export NEAR_ENV=shardnet;near call ouiouane-01.factory.shardnet.near ping '{}' --accountId "ouiouane-01.shardnet.near"  --gas=300000000000000
+ 0 */1 * * * export NEAR_ENV=shardnet;near call abahmane.factory.shardnet.near ping '{}' --accountId "abahmane.shardnet.near"  --gas=300000000000000
  ```
- 
- 
- 
-
-

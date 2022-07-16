@@ -4,7 +4,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
  # Setup a non root user
 
     
-   * Login as root and create a user (ouiouane)
+   * Login as root and create a user (ouiouane) and set a password
    
    ```bash
    root@Ubuntu-2004-focal-64-minimal ~ # sudo adduser ouiouane
@@ -24,6 +24,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    ```
    * Save a file and quit the editor.
 
+  quit the root session and login back using the urername you have just created (ouiouane).
 
 # Deploy the node
 

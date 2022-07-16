@@ -15,7 +15,7 @@ For this guide, we are using a Hetzner cloud server with the following specifica
   - 2 x 512 GB NVMe SSD (Raid1)
   - price : 36 euros/month
 
-  image
+  ![server](assets/node/server_hetzner.png "server")
 
 
 ## Create your Shardnet wallet

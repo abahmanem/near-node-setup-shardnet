@@ -5,7 +5,7 @@ In this guide, we will show how to setup a running node in Near Shardnet network
 
 ## Hardware
 
- [Stake Wars]([https://pages.github.com/](https://medium.com/nearprotocol/join-stake-wars-to-become-a-chunk-only-producer-52cb67b19f19))  main objective is to set up validator nodes called Chunk-Only Producers whose main purpose is to produce [chunks](https://near.org/papers/nightshade/#nightshade) in a single shard (a network partition).
+ [Stake Wars]([https://pages.github.com/](https://medium.com/nearprotocol/join-stake-wars-to-become-a-chunk-only-producer-52cb67b19f19)  main objective is to set up validator nodes called Chunk-Only Producers whose main purpose is to produce [chunks](https://near.org/papers/nightshade/#nightshade) in a single shard (a network partition).
 These validators can mount their nodes on machines with less constraining specifications compared to a full validating node [hardware requirement](https://near-nodes.io/validator/hardware) on the Near mainnet network (link to specs).
 For this guide, we are using a [Hetzner](https://hetzner.com) cloud server with the following specifications : 
 

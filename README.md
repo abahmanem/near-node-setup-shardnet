@@ -17,3 +17,5 @@ The present tutorial aims to guide us in setting up a validator node on the shar
 
 * [Configure a staking pool](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/staking-pool.md)
 
+* [Monitoring the node](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/node-monitoring.md)
+

@@ -8,8 +8,10 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    
    ```bash
    root@Ubuntu-2004-focal-64-minimal ~ # sudo adduser ouiouane
-    ```
-    add the user to the sudoers (nano or vim)
+   ```
+   
+   * Add the user to the sudoers (nano or vim)
+   
    ```bash
    root@Ubuntu-2004-focal-64-minimal ~ # EDITOR=vim visudo  
    ```

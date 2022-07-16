@@ -366,8 +366,8 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    
    Edit ~/.near/validator_key.json file and change the following :
 
-   - “account_id” : xxxx.factory.shardnet.near, where xxxx is the PoolName (abahmane our case)
-   - private_key to secret_key
+       1. “account_id” to xxxx.factory.shardnet.near, where xxxx is the Pool_Name (abahmane our case)
+       2. private_key to secret_key
    
   
   * Start the node

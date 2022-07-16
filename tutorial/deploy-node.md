@@ -350,7 +350,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    
    Edit ~/.near/validator_key.json file and change the following :
 
-   - “account_id” : xxxx.factory.shardnet.near, where xxx is the PoolName (abahmane our case)
+   - “account_id” : xxxx.factory.shardnet.near, where xxxx is the PoolName (abahmane our case)
    - private_key to secret_key
    
    Start the node
@@ -404,7 +404,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   ```
   Which will give the following output:
   
-  ![node_04](assets/node/node_logs_01.png "node_04") 
+  ![node_04](../assets/node/node_logs_01.png "node_04") 
   
   
   You can install ccze to print pretty logs

@@ -457,7 +457,9 @@ In the following sections, It's recommended to run the commands in this guide as
   ouiouane@Ubuntu-2004-focal-64-minimal:~/.near$ journalctl -n 100 -f -u neard
   ```
   Which will give the following output:
-  node_logs_01.png
+  
+  ![node_04](assets/node/node_logs_01.png "node_04") 
+  
   
   You can install ccze to print pretty logs
   ```bash
@@ -470,7 +472,7 @@ In the following sections, It's recommended to run the commands in this guide as
   ```
   will print the following
 
-  node_logs_02.png
+  ![node_04](assets/node/node_logs_02.png "node_04") 
 
   
 
@@ -495,7 +497,10 @@ In the following sections, It's recommended to run the commands in this guide as
   ```
 
   if successful, you will see the following :
-  staking_01.png
+  
+  ![node_04](assets/staking/staking_01.png "node_04") 
+  
+  
 
   You have  configured your Staking pool. You can see if your node is visible on https://explorer.shardnet.near.org/nodes/validators
 
@@ -508,7 +513,7 @@ In the following sections, It's recommended to run the commands in this guide as
  ```
   if the staking transaction is successful , you will see the following output  :
 
-  staking_02.png
+![node_04](assets/staking/staking_02.png "node_04") 
 
   Ping 
 

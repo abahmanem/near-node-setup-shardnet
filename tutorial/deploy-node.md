@@ -76,7 +76,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   lists the current validators set  
     
 
- ![node_01](assets/node/node_01.png "node_01") 
+ ![node_01](../assets/node/node_01.png "node_01") 
 
 
 
@@ -307,15 +307,15 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   Copy the url and paste it to you browser
   Grant Access to Near CLI
   
-  ![node_02](assets/node/node_02.png "node_02") 
+  ![node_02](../assets/node/node_02.png "node_02") 
   
-  ![node_03](assets/node/node_03.png "node_03") 
+  ![node_03](../assets/node/node_03.png "node_03") 
     
  
 
   After granting access you will see this page:
 
-  ![node_04](assets/node/node_04.png "node_04") 
+  ![node_04](../assets/node/node_04.png "node_04") 
   
   Enter your account-id and press Enter:
 
@@ -415,6 +415,6 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   ```
   will print the following
 
-  ![node_04](assets/node/node_logs_02.png "node_04") 
+  ![node_04](../assets/node/node_logs_02.png "node_04") 
 
   

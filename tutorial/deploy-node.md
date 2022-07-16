@@ -84,9 +84,9 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
 
 
 
-###Setup node validator
+### Setup node 
 
-  #### Install dependencies  and set the configuration
+  #### Install dependencies and set the configuration
     
   * First, check that you have the required hardware specifications to run a node 
 

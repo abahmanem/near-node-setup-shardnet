@@ -16,4 +16,4 @@ For this guide, we are using a [Hetzner](https://hetzner.com) cloud server with 
 
 
 
-  ![server](assets/node/server_hetzner.png "server")
+  ![server](../assets/node/server_hetzner.png "server")

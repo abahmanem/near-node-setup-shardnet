@@ -42,7 +42,8 @@
 
   You have successfully  configured your Staking pool. You can now check if your node is visible on https://explorer.shardnet.near.org/nodes/validators
 
-  Deposit and Stake NEAR
+  ## Deposit and Stake NEAR test tokens
+
 
   You can stake to your node by running the following command :
 
@@ -53,7 +54,7 @@
 
 ![node_04](../assets/staking/staking_02.png "node_04") 
 
-  Ping 
+ ## Ping
 
  A ping should be issued each epoch to keep reported rewards current.
 

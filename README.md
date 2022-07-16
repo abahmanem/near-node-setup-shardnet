@@ -3,10 +3,11 @@
 
 
 
-
 The present tutorial aims to guide us in setting up a validator node on the shardnet network through the following 3 steps:
 
 
+
+* [Hardware](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/hardware.md)
 
 * [Create a Shardnet wallet](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/create-wallet.md)
 

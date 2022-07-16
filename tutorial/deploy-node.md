@@ -1,7 +1,7 @@
 
 In the following sections, **It's recommended** to run the commands  as a non-root user
  
- # Setup a non root user
+ # Setup a non-root user
 
     
    * Login as root and create a user (abahmane) and set a password
@@ -364,7 +364,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
     abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo vi /etc/systemd/system/neard.service
    ```
     
-   Copy and paste the following :
+   **Copy and paste the following**
   
  ```bash   
    [Unit]
@@ -384,20 +384,21 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    WantedBy=multi-user.target
   ```
   
-  repalce <USER> by a non root user (abahmane)
+  repalce **<USER>** by a non-root user (abahmane)
 
   Enable neard service 
 
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo systemctl enable neard
   ```
-  Start the node :
+  
+ Start the node
   
   ```bash 
   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo systemctl start neard
   ```
    
-  You can see the node logs by runing the following command :
+ You can check the node logs by issuing the following command
 
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~/.near$ journalctl -n 100 -f -u neard

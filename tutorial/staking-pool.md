@@ -48,9 +48,24 @@
    ouiouane@Ubuntu-2004-focal-64-minimal:~/nearcore$ near call ouiouane-01.factory.shardnet.near ping '{}' --accountId ouiouane-01.shardnet.near --gas=300000000000000
    ```
 
- if successful, you will see the following:
+ 
+ if the ping is successful, you will see the following output:
 
  ![node_04](../assets/staking/ping_01.png "node_04") 
+ 
+ You can add a crontab job to do a ping every half-epoch (3 hours) :
+ 
+ ```bash
+ ouiouane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo crontab -e
+ ```
+ 
+ Add the job to the end of file :
+ 
+  ```bash
+ 0 */1 * * * export NEAR_ENV=shardnet;near call ouiouane-01.factory.shardnet.near ping '{}' --accountId "ouiouane-01.shardnet.near"  --gas=300000000000000
+ ```
+ 
+ 
  
 
 

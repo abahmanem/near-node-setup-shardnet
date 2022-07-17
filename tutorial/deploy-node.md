@@ -54,7 +54,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    ```
 
    * Check Node.js and npm versions:
-   *
+   
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal:~$ node -v
   v18.6.0
@@ -65,6 +65,12 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   8.13.2   
   ```
 
+  * Update npm to 8.14.0
+
+  ```bash
+   abahmane@Ubuntu-2004-focal-64-minimal:~$sudo npm install -g npm@8.14.0
+ ```
+ 
    * Install NEAR-CLI
    
   ```bash

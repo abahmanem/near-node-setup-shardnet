@@ -139,3 +139,6 @@ abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$curl -s -d '{"jsonrpc": "2.0", 
  ```bash
  0 */1 * * * export NEAR_ENV=shardnet;near call abahmane.factory.shardnet.near ping '{}' --accountId "abahmane.shardnet.near"  --gas=300000000000000
  ```
+
+
+  [Next Step : Node monitoring] (https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/node-monitoring.md))

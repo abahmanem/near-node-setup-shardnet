@@ -75,20 +75,20 @@
  
  After issuing a ping, the node joins the **proposal** list on https://explorer.shardnet.near.org/nodes/validators.
  <br/><br/>
-<br/><br/>
+
  ![proposal](../assets/staking/proposal.png "proposal") 
- 
+ <br/><br/>
  
  In the next Epoch (2h30 in Shardnet), it will enter the **'joining'** list 
   
-    
+  <br/><br/>  
  ![joining](../assets/staking/joining.png "join") 
- 
+ <br/><br/>
  
  And finnaly enters the validator **active** slot :
-  
+  <br/><br/>
  ![joining](../assets/staking/active.png "join") 
-  
+  <br/><br/>
   
  So it takes at least 2 Epochs after setting up the node to see it in the list of active validators on https://explorer.shardnet.near.org/nodes/validators
  
@@ -96,9 +96,9 @@
  From time to time,The node may be kiked out for many reason, the most common when the node did not produced the expected number of blocks. In that    
  case, the node is marked as **kickout**.
  
- 
+ <br/><br/>
   ![kickout](../assets/staking/kickout.png "kickout") 
- 
+ <br/><br/>
  Many reasons could cause the node to be kicke out : 
  
  Network issues, bugs,  power problems ,  etc.. 

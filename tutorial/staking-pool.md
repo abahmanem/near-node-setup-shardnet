@@ -57,23 +57,23 @@
 
  ## Ping
 
- A ping should be issued each epoch to keep reported rewards current.
+ A Ping should be issued each epoch to keep track of rewards.
 
- to run a ping, use the following command:
+ To run a Ping, use the following command:
 
    ```bash
    abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ near call abahmane.factory.shardnet.near ping '{}' --accountId abahmane.shardnet.near --gas=300000000000000
    ```
 
  
- if the ping is successful, you will see the following output:
+ If the Ping is successful, you will see the following output:
 
  ![node_04](../assets/staking/ping_01.png "node_04") 
  
 
  
  
- After issuing a ping,abd if it was successful, the node joins the **proposal** list on https://explorer.shardnet.near.org/nodes/validators.
+ After issuing a Ping,and if it was successful, the node will join the **proposal** list on https://explorer.shardnet.near.org/nodes/validators.
  <br/><br/>
 
  ![proposal](../assets/staking/proposal.png "proposal") 
@@ -85,7 +85,7 @@
  ![joining](../assets/staking/joining.png "join") 
  <br/><br/>
  
- And finnaly enters the validator **active** slot :
+ And finnaly, it join the **active** validators  slot :
   <br/><br/>
  ![joining](../assets/staking/active.png "join") 
   <br/><br/>
@@ -93,8 +93,9 @@
  So it takes at least 2 Epochs after setting up the node to see it in the list of active validators on https://explorer.shardnet.near.org/nodes/validators
  
  
- From time to time,The node may be kiked out for many reason, the most common when the node did not produced the expected number of blocks. In that    
- case, the node is marked as **kickout**.
+ From time to time,The node may be kicked out for many reason, the most common is when the node did not produce the expected number of blocks.
+ 
+ When the node is kicked out , it's marked as **kickout**.
  
  <br/><br/>
   ![kickout](../assets/staking/kickout.png "kickout") 
@@ -104,7 +105,7 @@
  Network issues, bugs,  power problems ,  etc.. 
  
  
- You may run this command to have more details on the reasons of kickout:
+ You may run this command to have more details on the reasons of the **kickout**:
  
  ```bash
  
@@ -123,14 +124,13 @@ abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$curl -s -d '{"jsonrpc": "2.0", 
 }
  ```
  
- This means that the node was kicked out because it has only produced 73 blcosk while it should have produced 117 in that Epoch.
+ This means that the node was kicked out because it has produced only 73 blcocks out of the 117 excpected in that Epoch.
  
  
- You need to ping the network to become active again. 
+ You need to Ping the network to become active again. 
  
-  
- 
-  You can add a crontab job to do a ping every half-epoch (1.5 or 2 hours) :
+   
+  To avoid node eviction, You can add a crontab job to do a ping every half-epoch (1.5 or 2 hours) :
  
  ```bash
  abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo crontab -e

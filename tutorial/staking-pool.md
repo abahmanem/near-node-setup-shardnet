@@ -82,21 +82,21 @@
  ![proposal](../assets/staking/proposal.png "proposal") 
  
  
-  In the next Epoch (2h30 in Shardnet), it will enter the 'joining' list 
+ In the next Epoch (2h30 in Shardnet), it will enter the **'joining'** list 
   
     
  ![joining](../assets/staking/joining.png "join") 
  
  
- And finnaly enter the validator active slot :
+ And finnaly enter the validator **active** slot :
   
  ![joining](../assets/staking/active.png "join") 
   
   
- So it take 2 Epochs after setting up teh node to see it in the list of active validators on https://explorer.shardnet.near.org/nodes/validators
+ So it take 2 Epochs after setting up the node to see it in the list of active validators on https://explorer.shardnet.near.org/nodes/validators
  
  
- The node may be kiked ou for many reason, the most common when the node did not produced the expected number of blocks. In that case, the node is markec 'kickout'.
+ The node may be kiked ou for many reason, the most common when the node did not produced the expected number of blocks. In that case, the node is markec **kickout**.
  
  
   ![kickout](../assets/staking/kickout.png "kickout") 

@@ -77,7 +77,7 @@
  ```
  
  
- After issuing a ping, the node joins the proposal list on https://explorer.shardnet.near.org/nodes/validators.
+ After issuing a ping, the node joins the **proposal** list on https://explorer.shardnet.near.org/nodes/validators.
  
  ![proposal](../assets/staking/proposal.png "proposal") 
  

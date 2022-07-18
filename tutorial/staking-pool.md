@@ -89,20 +89,21 @@
  ![joining](../assets/staking/active.png "join") 
   
   
- So it take at least 2 Epochs after setting up the node to see it in the list of active validators on https://explorer.shardnet.near.org/nodes/validators
+ So it takes at least 2 Epochs after setting up the node to see it in the list of active validators on https://explorer.shardnet.near.org/nodes/validators
  
  
- From time to time,The node may be kiked out for many reason, the most common when the node did not produced the expected number of blocks. In that case, the node is markec **kickout**.
+ From time to time,The node may be kiked out for many reason, the most common when the node did not produced the expected number of blocks. In that    
+ case, the node is marked as **kickout**.
  
  
   ![kickout](../assets/staking/kickout.png "kickout") 
  
  Many reasons could cause the node to be kicke out : 
  
-  Network issues, bugs,  power problems ,  etc.. 
+ Network issues, bugs,  power problems ,  etc.. 
  
  
- You may issues this command to have more details on the reasons of kickout:
+ You may run this command to have more details on the reasons of kickout:
  
  ```bash
  
@@ -126,8 +127,7 @@ abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$curl -s -d '{"jsonrpc": "2.0", 
  
  You need to ping the network to become active again. 
  
- 
- 
+  
  
   You can add a crontab job to do a ping every half-epoch (1.5 or 2 hours) :
  

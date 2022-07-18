@@ -42,7 +42,6 @@
 
   You have successfully  configured your Staking pool.
   
-  You can now check if your node is visible on https://explorer.shardnet.near.org/nodes/validators
 
   ## Deposit and Stake NEAR test tokens
 
@@ -77,8 +76,60 @@
  abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo crontab -e
  ```
  
- Add the job to the end of file :
  
-  ```bash
+ After issuing a ping, the node joins the proposal list on https://explorer.shardnet.near.org/nodes/validators.
+ 
+ ![proposal](../assets/staking/proposal.png "proposal") 
+ 
+ 
+  In the next Epoch (2h30 in Shardnet), it will enter the 'joining' list 
+  
+    
+ ![joining](../assets/staking/joining.png "join") 
+ 
+ 
+ And finnaly enter the validator active slot :
+  
+ ![joining](../assets/staking/active.png "join") 
+  
+  
+ So it take 2 Epochs after setting up teh node to see it in the list of active validators on https://explorer.shardnet.near.org/nodes/validators
+ 
+ 
+ The node may be kiked ou for many reason, the most common when the node did not produced the expected number of blocks. In that case, the node is markec 'kickout'.
+ 
+ 
+  ![kickout](../assets/staking/kickout.png "kickout") 
+ 
+ 
+ You may issues this command to have more detail on the reasons of kickout:
+ 
+ ```bash
+ 
+abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' 127.0.0.1:3030 | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("abahmane.factory.shardnet.near"))' | jq .reason
+ 
+ ```
+ 
+ Which will produce :
+ 
+ ```bash
+ {
+  "NotEnoughBlocks": {
+    "expected": 117,
+    "produced": 73
+  }
+}
+ ```
+ 
+You need to ping the network again to become active again 
+ 
+ 
+  You can add a crontab job to do a ping every half-epoch (1.5 or 2 hours) :
+ 
+ ```bash
+ abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo crontab -e
+ ```
+
+ ```bash
  0 */1 * * * export NEAR_ENV=shardnet;near call abahmane.factory.shardnet.near ping '{}' --accountId "abahmane.shardnet.near"  --gas=300000000000000
  ```

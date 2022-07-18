@@ -22,6 +22,12 @@ For this guide, we are using a [Hetzner](https://hetzner.com) cloud server with 
   
   You can check if you have the recommanded specification by running the following command :
   
+  ```java
+  lscpu | grep -P '(?=.*avx )(?=.*sse4.2 )(?=.*cx16 )(?=.*popcnt )' > /dev/null \
+  && echo "Supported" \
+  || echo "Not supported"
+  ```
+  
   ```bash
   abahmane@Ubuntu-2004-focal-64-minimal ~ # lscpu | grep -P '(?=.*avx )(?=.*sse4.2 )(?=.*cx16 )(?=.*popcnt )' > /dev/null \
   >   && echo "Supported" \

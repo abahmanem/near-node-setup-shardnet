@@ -447,4 +447,6 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
 
   ![node_04](../assets/node/node_logs_02.png "node_04") 
 
+ 
+  [Next Step : Configuring a Staking pool] (https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/staking-pool.md))
   

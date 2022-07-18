@@ -142,4 +142,4 @@ abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$curl -s -d '{"jsonrpc": "2.0", 
 
 <br/><br/>
 
-  [Next Step : Node monitoring](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/node-monitoring.md))
+  [Next Step : Node monitoring](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/node-monitoring.md)

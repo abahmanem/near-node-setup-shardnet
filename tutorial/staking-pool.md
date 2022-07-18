@@ -73,7 +73,7 @@
 
  
  
- After issuing a ping, the node joins the **proposal** list on https://explorer.shardnet.near.org/nodes/validators.
+ After issuing a ping,abd if it was successful, the node joins the **proposal** list on https://explorer.shardnet.near.org/nodes/validators.
  <br/><br/>
 
  ![proposal](../assets/staking/proposal.png "proposal") 
@@ -99,7 +99,7 @@
  <br/><br/>
   ![kickout](../assets/staking/kickout.png "kickout") 
  <br/><br/>
- Many reasons could cause the node to be kicke out : 
+ Many reasons could cause the node to be kicked out : 
  
  Network issues, bugs,  power problems ,  etc.. 
  

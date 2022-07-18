@@ -41,5 +41,5 @@ In this section, we will learn how to create a Shardnet wallet
    ![server](../assets/wallet/wallet_08.png "server")
  <br/><br/>
  
- [Next Step :Deploy the node] (https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/deploy-node.md)
+ [Next Step : Deploying the node](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/deploy-node.md)
 

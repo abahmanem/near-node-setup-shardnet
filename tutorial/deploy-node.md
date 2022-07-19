@@ -367,7 +367,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   Copy the file generated to shardnet folder and be sure to replace <pool_id> by your accountId
    
    ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~$ cp ~/.near-credentials/shardnet/abahmane.json ~/.near/validator_key.json
+   abahmane@Ubuntu-2004-focal-64-minimal:~$ cp ~/.near-credentials/shardnet/abahmane.shardnet.near.json ~/.near/validator_key.json
    ```
    
    Edit ~/.near/validator_key.json file and change the following :

@@ -53,9 +53,11 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  <br/><br/>
  
  
- <br/><br/>
+   <br/><br/>
+   ![server](../assets/monitoring/logs.png "server")
+  <br/><br/>
  
- ![logs](https://user-images.githubusercontent.com/101295246/179851146-084cccaf-5195-49c4-b5f2-098194bf5c02.png)
+
 
  
  ## Monitor using Near-cli

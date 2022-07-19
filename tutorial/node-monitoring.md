@@ -127,7 +127,7 @@ abahmane@Ubuntu-2004-focal-64-minimal ~ #```bash
 
 if the result is empty, you wont have a seat in the next active validator set.
 
-If you are not in the current active slot, You can query RCP about the last Epoch and see the reason why you were slashed :
+If you are not in the current active slot, You can query the RCP endpoint about the last Epoch and see the reason why you were slashed :
 
 ```bash
  curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' https://rpc.shardnet.near.org | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("<pool-id>"))' | jq .reason

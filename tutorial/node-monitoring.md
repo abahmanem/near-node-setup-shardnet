@@ -42,12 +42,13 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  
  ```
  
+ ## Monitor using Near-cli
   
  * Check if Node is active (not slashed)
  
  You can **use near-cli** to see if your node is currently active
  
- * Get the current list of active validators:
+ * Get the current set of active validators:
  *
  ```bash
   abahmane@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators current 
@@ -65,18 +66,81 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  | abahmane.factory.shardnet.near           | 45,317    | 1       | 91.57%   |             100 |             127 |            1638 |            1771 |
  ```
  
+  * Check your current stake
+
+  You can use this command to check you total stake
+  
+  near validators current | awk '/<pool-id/ {print $4}'
+ 
+ Example:
+ 
+ ```bash
+ abahmane@Ubuntu-2004-focal-64-minimal ~ # near validators current | awk '/abahmane.factory.shardnet.near/ {print $4}'
+45,317
+ 
+ ```
  
  
- * Kickout Sate: Why?
+ * Kickout Sate next Epoch?
  
- if you are not in the list of active validator, that means you have been kicked ou (slashed)
+ You can run this command to see if your node won't be in the actiev slot next Epoch
+ 
+ near validators next | grep "Kicked out" | grep "<POOL_ID>"
+ 
+ Example : 
+ 
+ ```bash
+ abahmane@Ubuntu-2004-focal-64-minimal ~ # near validators next | grep "Kicked out" | grep "abahmane.factory.shardnet.near"
+| Kicked out | abahmane.factory.shardnet.near                | -                | -       |
+ ```
+ 
+ 
+ 
+ if you are not in the list of current active validator, that means you have been kicked ou (slashed)
  To know the reason, run this command:
  
  ```bash
  curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' 127.0.0.1:3030 | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("<POOL_ID>"))' | jq .reason
  ```
 
+## Monitor node using RPC endpoint
   
+  Check if you will have a set in the next Eoch :
 
+```bash
+  curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' https://rpc.shardnet.near.org | jq -c '.result.next_validators[] | select(.account_id | contains ("<POOL_ID>"))'
+  ```
+
+Example: 
+
+abahmane@Ubuntu-2004-focal-64-minimal ~ #```bash
+ curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json'   https://rpc.shardnet.near.org | jq -c '.result.next_validators[] | select(.account_id | contains ("abahmane.factory.shardnet.near"))'
+  ```
+
+if the result is empty, you wont have a seat in the next active validator set.
+
+If you are not in the active slot, You can query RCP about the last Epoch and see the reason why you were slashed :
+
+```bash
+ curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' https://rpc.shardnet.near.org | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("<pool-id>"))' | jq .reason
+```
+
+Example :
+
+```bash
+ abahmane@Ubuntu-2004-focal-64-minimal ~ # curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' \ https://rpc.shardnet.near.org | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("abahmane.factory.shardnet.near"))' | jq .reason
+ ```
+ 
+ gives :
+ 
+ ```bash
+ {
+  "NotEnoughBlocks": {
+    "expected": 619,
+    "produced": 242
+  }
+}
+ ```
+ 
 # Grafana + Prometheus
 

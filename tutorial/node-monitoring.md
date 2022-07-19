@@ -69,7 +69,14 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  
  * Kickout Sate: Why?
  
+ if you are not in the list of active validator, that means you have been kicked ou (slashed)
+ To know the reason, run this command:
+ 
+ ```bash
+ curl -s -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' 127.0.0.1:3030 | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("<POOL_ID>"))' | jq .reason
+ ```
 
- * 
+  
 
-# Use of Graffana
+# Grafana + Prometheus
+

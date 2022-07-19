@@ -89,12 +89,13 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  ```
  
  
- * Kickout Sate next Epoch?
+ * Slashed in the next Epoch?
  
  You can run this command to see if your node won't be in the actiev slot next Epoch
  
+ ```bash
  near validators next | grep "Kicked out" | grep "<POOL_ID>"
- 
+  ```bash
  Example : 
  
  ```bash

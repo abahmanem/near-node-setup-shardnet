@@ -51,9 +51,6 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  
  Will show the following 
  <br/><br/>
- 
- 
-   <br/><br/>
    ![server](../assets/monitoring/logs.png "server")
   <br/><br/>
  
@@ -120,10 +117,9 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  abahmane@Ubuntu-2004-focal-64-minimal ~ # near validators next | grep "Kicked out" | grep "abahmane.factory.shardnet.near"
 | Kicked out | abahmane.factory.shardnet.near                | -                | -       |
  ```
+  
  
- 
- 
- if you are not in the list of current active validator, that means you have been kicked ou (slashed)
+ if you are not in the list of current active validators, that means you have been kicked ou (slashed)
  To know the reason, run this command:
  
  ```bash
@@ -139,8 +135,9 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
   ```
 
 Example: 
+
 ```bash
-abahmane@Ubuntu-2004-focal-64-minimal ~ #```bash
+abahmane@Ubuntu-2004-focal-64-minimal ~ #
  curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json'   https://rpc.shardnet.near.org | jq -c '.result.next_validators[] | select(.account_id | contains ("abahmane.factory.shardnet.near"))'
 ```
 

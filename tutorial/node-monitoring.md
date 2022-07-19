@@ -48,8 +48,14 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  
  You can **use near-cli** to see if your node is currently active
  
+  * Get the next Epoch set of active validators:
+ 
+ ```bash
+  abahmane@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators next 
+ ```
+ 
  * Get the current set of active validators:
- *
+ 
  ```bash
   abahmane@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators current 
  ```

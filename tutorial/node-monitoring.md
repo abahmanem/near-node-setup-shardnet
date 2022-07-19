@@ -70,8 +70,10 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
 
   You can use this command to check you total stake
   
+   ```bash
   near validators current | awk '/<pool-id/ {print $4}'
- 
+   ```bash
+   
  Example:
  
  ```bash

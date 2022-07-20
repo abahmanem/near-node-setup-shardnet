@@ -168,3 +168,170 @@ Example :
  
 # Grafana + Prometheus
 
+ In teh following section, we will see how you can monitor the node using Grafana & Prometheus
+ 
+ ### Install Docker
+ 
+ ```bash
+ sudo apt-get update
+ sudo apt install docker.io
+ ```
+ 
+  ### Run Node Exporter on the Node
+ 
+ ```bash
+ sudo docker run -dit \
+    --restart always \
+    --volume /proc:/host/proc:ro \
+    --volume /sys:/host/sys:ro \
+    --volume /:/rootfs:ro \
+    --name node-exporter \
+    -p 9100:9100 prom/node-exporter:latest \
+    --path.procfs=/host/proc \
+    --path.sysfs=/host/sys
+ ```
+ 
+   ### Run Node Exporter on the Node
+ 
+ ```bash
+ sudo docker run -dit \
+    --restart always \
+    --volume /proc:/host/proc:ro \
+    --volume /sys:/host/sys:ro \
+    --volume /:/rootfs:ro \
+    --name node-exporter \
+    -p 9100:9100 prom/node-exporter:latest \
+    --path.procfs=/host/proc \
+    --path.sysfs=/host/sys
+   ```
+ 
+ It is necessary to open port 9100 so that Prometheus can collect the data form the node. 
+ 
+### Build your own image
+ 
+ 
+```bash
+git clone https://github.com/masknetgoal634/near-prometheus-exporter
+cd near-prometheus-exporter
+sudo docker build -t near-prometheus-exporter .
+  ```
+ 
+Run image on docker:
+
+```bash
+sudo docker run -dit \
+    --restart always \
+    --name near-exporter \
+    --network=host \
+    -p 9333:9333 \
+    near-prometheus-exporter:latest /dist/main -accountId <POOL_ID>
+  ```
+
+ Replace <POOL_ID> with your staking pool id (example : ait-belhaj.factory.shardnet.near)
+ 
+Do not forget to open port 3030 and port 9333 so that Prometheus can collect the data of our node and send it to the server.
+
+### Configure the  Node  Target on Prometheus Server
+
+Edit  prometheus/prometheus.yml and add the IP address of your node:
+
+```bash
+...
+  - job_name: node
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['**<NODE_IP_ADDRESS>**:9100']
+
+  - job_name: near-exporter
+    scrape_interval: 15s
+    static_configs:
+    - targets: ['**<NODE_IP_ADDRESS>**:9333']
+
+  - job_name: near-node
+    scrape_interval: 15s
+    static_configs:
+    - targets: ['**<NODE_IP_ADDRESS>**:3030']
+  ...
+```
+
+### Run Prometheus 
+
+```bash
+sudo docker run -dti \
+    --restart always \
+    --volume $(pwd)/prometheus:/etc/prometheus/ \
+    --name prometheus \
+    --network=host \
+    -p 9090:9090 prom/prometheus:latest \
+    --config.file=/etc/prometheus/prometheus.yml
+```
+
+### Run Grafana
+ 
+ Edit  grafana/custom.ini and add your Gmail address
+ 
+ ```bash
+ ...
+#################################### SMTP / Emailing ##########################
+[smtp]
+enabled = true
+host = smtp.gmail.com:587 
+user = **<your_gmail_address>**
+# If the password contains # or ; you have to wrap it with triple quotes. Ex """#password;"""
+password = **<your_gmail_password>**
+;cert_file =
+;key_file =
+skip_verify = true
+from_address = **<your_gmail_address>**
+from_name = Grafana
+# EHLO identity in SMTP dialog (defaults to instance_name)
+;ehlo_identity = dashboard.example.com
+# SMTP startTLS policy (defaults to 'OpportunisticStartTLS') 
+;startTLS_policy = NoStartTLS
+ 
+ ```
+ 
+ Let's find out the user ID with which we are :
+ 
+ ```bash
+ id -u
+ ```
+ 
+ ```bash
+ aitbelhaj@Ubuntu-2004-focal-64-minimal:~/near-prometheus-exporter/etc$  id -u
+ 1000
+ ```
+ 
+ ```bash
+ sudo chown -R 1000:1000 grafana/*
+sudo docker run  --user root  -dit \
+   --restart always \
+     --volume $(pwd)/grafana:/var/lib/grafana \
+     --volume $(pwd)/grafana/provisioning:/etc/grafana/provisioning \
+     --volume $(pwd)/grafana/custom.ini:/etc/grafana/grafana.ini \
+     --user 1000 \
+     --network=host \
+     --name grafana \
+     -p 3000:3000 grafana/grafana
+ ```
+ 
+ Open grafana in a browser : http://<NODE_IP_ADDRESS>:3000
+ user: admin Password: admin
+
+ image 1
+
+
+Open Near Node Exporter Full dashboard
+ 
+ img2
+ img3
+ 
+ ### Email Notification Alert 
+ 
+ Configure an Email Alert channel in the alerting section:
+ 
+ Test sending an alert
+ 
+ 
+ 
+ 

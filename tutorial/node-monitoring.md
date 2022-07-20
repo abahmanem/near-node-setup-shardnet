@@ -367,13 +367,14 @@ Open Near Node Exporter Full dashboard
 ![node_01](../assets/monitoring/alert_1.png "node_01") 
  <br/><br/>
 
-Choose the metric subject of teh alert : near_seat_price
+Choose the metric subject of the alert : **near_seat_price** 
+
+Set as condition : **If  near_seat_price drops below 300 NEAR, send an email alert**
 <br/><br/>
 
 ![node_01](../assets/monitoring/alert_2.png "node_01") 
  <br/><br/>
 
-** If  near_seat_price drops below 300 NEAR, send an email alert**
 
 ![node_01](../assets/monitoring/alert_3.png "node_01") 
  <br/><br/>

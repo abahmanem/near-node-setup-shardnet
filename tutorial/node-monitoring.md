@@ -318,20 +318,32 @@ sudo docker run  --user root  -dit \
  Open grafana in a browser : http://<NODE_IP_ADDRESS>:3000
  user: admin Password: admin
 
- image 1
-
+ <br/><br/>
+![node_01](../assets/monitoring/grafana_1.png "node_01") 
+ <br/><br/>
 
 Open Near Node Exporter Full dashboard
+  <br/><br/>
+![node_01](../assets/monitoring/grafana_2.png "node_01") 
+ <br/><br/>
+
+![node_01](../assets/monitoring/grafana_3.png "node_01") 
+ <br/><br/>
  
- img2
- img3
  
  ### Email Notification Alert 
  
  Configure an Email Alert channel in the alerting section:
+  <br/><br/>
+
+![node_01](../assets/monitoring/grafana_4.png "node_01") 
+ <br/><br/>
  
  Test sending an alert
  
  
- 
+   <br/><br/>
+
+![node_01](../assets/monitoring/grafana_5.png "node_01") 
+ <br/><br/>
  

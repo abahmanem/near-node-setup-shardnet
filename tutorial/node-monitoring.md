@@ -168,7 +168,7 @@ Example :
  
 # Grafana + Prometheus
 
- In teh following section, we will see how you can monitor the node using Grafana & Prometheus
+ In the following section, we will see how you can monitor the node using Grafana & Prometheus
  
  ### Install Docker
  

@@ -347,3 +347,14 @@ Open Near Node Exporter Full dashboard
 ![node_01](../assets/monitoring/grafana_5.png "node_01") 
  <br/><br/>
  
+ 
+ Check reception of  Test alert :
+ 
+   <br/><br/>
+
+![node_01](../assets/monitoring/grafana_6.png "node_01") 
+ <br/><br/>
+ 
+ 
+ 
+ 

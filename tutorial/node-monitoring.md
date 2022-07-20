@@ -357,4 +357,27 @@ Open Near Node Exporter Full dashboard
  
  
  
+ ## Add Notification 
+ 
+ We are going to add an Alert on seat price : 
+ 
+ Create alert rule
+
+ <br/><br/>
+![node_01](../assets/monitoring/alert_1.png "node_01") 
+ <br/><br/>
+
+Choose the metric subject of teh alert : near_seat_price
+<br/><br/>
+
+![node_01](../assets/monitoring/alert_2.png "node_01") 
+ <br/><br/>
+
+** If  near_seat_price drops below 300 NEAR, send an email alert**
+
+![node_01](../assets/monitoring/alert_3.png "node_01") 
+ <br/><br/>
+ 
+ 
+ Save and Exit.
  

@@ -291,7 +291,7 @@ from_name = Grafana
  
  ```
  
- Let's find out the user ID with which we are :
+ Find out our user ID :
  
  ```bash
  id -u
@@ -361,7 +361,10 @@ Open Near Node Exporter Full dashboard
  
  We are going to add an Alert on seat price : 
  
- Create alert rule
+ condition :  **If  near_seat_price drops below 300 NEAR, send an email alert** , an alert will be sent by Email
+ 
+ 
+ Create an alert rule
 
  <br/><br/>
 ![node_01](../assets/monitoring/alert_1.png "node_01") 
@@ -369,7 +372,8 @@ Open Near Node Exporter Full dashboard
 
 Choose the metric subject of the alert : **near_seat_price** 
 
-Set as condition : **If  near_seat_price drops below 300 NEAR, send an email alert**
+Set the above condition 
+
 <br/><br/>
 
 ![node_01](../assets/monitoring/alert_2.png "node_01") 

@@ -357,7 +357,7 @@ Open Near Node Exporter Full dashboard
  
  
  
- ## Add Notification 
+ ## Example of Alert+Notification on Shardnet metrics  
  
  We are going to add an Alert on seat price : 
  

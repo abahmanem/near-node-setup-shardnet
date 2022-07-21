@@ -29,7 +29,7 @@ For this guide, we are using a [Hetzner](https://hetzner.com) cloud server with 
   ```
   
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal ~ # lscpu | grep -P '(?=.*avx )(?=.*sse4.2 )(?=.*cx16 )(?=.*popcnt )' > /dev/null \
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # lscpu | grep -P '(?=.*avx )(?=.*sse4.2 )(?=.*cx16 )(?=.*popcnt )' > /dev/null \
   >   && echo "Supported" \
   >   || echo "Not supported"
   ```

@@ -92,7 +92,7 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
   You can use this command to check you total stake
   
    ```bash
-  near validators current | awk '/<pool-id/ {print $4}'
+  near validators current | awk '/<pool-id>/ {print $4}'
    ```bash
    
  Example:
@@ -110,12 +110,12 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  
  ```bash
  near validators next | grep "Kicked out" | grep "<POOL_ID>"
-  ```bash
+
  Example : 
  
  ```bash
  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # near validators next | grep "Kicked out" | grep "ait-belhaj.factory.shardnet.near"
-| Kicked out | ai-tbelhaj.factory.shardnet.near                | -                | -       |
+| Kicked out | ait-belhaj.factory.shardnet.near                | -                | -       |
  ```
   
  
@@ -160,8 +160,8 @@ Example :
  ```bash
  {
   "NotEnoughBlocks": {
-    "expected": 619,
-    "produced": 242
+    "expected": 20,
+    "produced": 7
   }
 }
  ```

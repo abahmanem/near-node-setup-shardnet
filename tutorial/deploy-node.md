@@ -7,11 +7,11 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    * Login as root and create a user and set a password
    
    ```bash
-   root@Ubuntu-2004-focal-64-minimal ~ # sudo adduser abahmane
-   Adding user `abahmane' ...
-   Adding new group `abahmane' (1000) ...
-   Adding new user `abahmane' (1000) with group `abahmane' ...
-   Creating home directory `/home/abahmane' ...
+   root@Ubuntu-2004-focal-64-minimal ~ # sudo adduser aitbelhaj
+   Adding user `aitbelhaj' ...
+   Adding new group `aitbelhaj' (1000) ...
+   Adding new user `aitbelhaj' (1000) with group `aitbelhaj' ...
+   Creating home directory `/home/aitbelhaj' ...
    Copying files from `/etc/skel' ...
    New password:
    Retype new password:
@@ -29,7 +29,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    * Add the line :
 
    ```bash
-   abahmane  ALL=(ALL) NOPASSWD:ALL
+   aitbelhaj  ALL=(ALL) NOPASSWD:ALL
    ```
    * Save a file and quit the editor.
 
@@ -42,7 +42,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    * Sync and install the newest versions of all installed packages on the linux machine
 
    ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~$ sudo apt update && sudo apt upgrade -y
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ sudo apt update && sudo apt upgrade -y
    ```
 
     * Install Node.js and npm
@@ -56,38 +56,38 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    * Check Node.js and npm versions:
    
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ node -v
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ node -v
   v18.6.0
   ```
 
    ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ npm -v
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ npm -v
   8.13.2   
   ```
 
   * Update npm to 8.14.0
 
   ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~$sudo npm install -g npm@8.14.0
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~$sudo npm install -g npm@8.14.0
  ```
  
    * Install NEAR-CLI
    
   ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~$ sudo npm install -g near-cli
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ sudo npm install -g near-cli
   ```
 
    * Set Network to Shardnet, in order to make it persistent, add it to ~/.bashrc.
   
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ echo 'export NEAR_ENV=shardnet' >> ~/.bashrc
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ echo 'export NEAR_ENV=shardnet' >> ~/.bashrc
   ```
   
   Near-Cli is now installed, you can check by running the following commands for example:
    
    
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ near validators current 
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ near validators current 
   ```   
    
   Thsi command lists the current validators set :  
@@ -104,7 +104,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   * First, check that you have the required hardware specifications to run a node 
 
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ lscpu | grep -P '(?=.*avx )(?=.*sse4.2 )(?=.*cx16 )(?=.*popcnt )' > /dev/null \
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ lscpu | grep -P '(?=.*avx )(?=.*sse4.2 )(?=.*cx16 )(?=.*popcnt )' > /dev/null \
   >   && echo "Supported" \
   >   || echo "Not supported"
   Supported
@@ -112,31 +112,31 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   * Install developer tools: 
 
    ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo
   ```
   * Install Python pip
 
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ sudo apt install python3-pip
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ sudo apt install python3-pip
   ```
 
   * Set the configuration 
 
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ USER_BASE_BIN=$(python3 -m site --user-base)/bin
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ export PATH="$USER_BASE_BIN:$PATH"
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ USER_BASE_BIN=$(python3 -m site --user-base)/bin
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ export PATH="$USER_BASE_BIN:$PATH"
 
   ```
   * Install Building env
   
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ sudo apt install clang build-essential make
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ sudo apt install clang build-essential make
   ```
 
   * Install Rust & Cargo
 
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   ```
 
    you will see the following output , press 1 and press enter :
@@ -182,32 +182,32 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   * Source the environment
   
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ source $HOME/.cargo/env
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ source $HOME/.cargo/env
   ``` 
 
   * Clone nearcore project from GitHub : 
   
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ git clone https://github.com/near/nearcore
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ git clone https://github.com/near/nearcore
    ```  
    then 
    
    ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~$ cd nearcore
-   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ git fetch
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ cd nearcore
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ git fetch
    ``` 
     
   checkout to the master branch 
    
    ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ git checkout master
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ git checkout master
    Already on 'master'
    Your branch is up to date with 'origin/master'.
    ``` 
    Compile nearcore binary, run the following commands in the nearcore folder :
   
    ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ cargo build -p neard --release --features shardnet
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ cargo build -p neard --release --features shardnet
    ``` 
    The binary path is set to target/release/neard  
 
@@ -224,7 +224,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    Run the following command to generate working directory 
 
    ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$./target/release/neard --home ~/.near init --chain-id shardnet --download-genesis 
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$./target/release/neard --home ~/.near init --chain-id shardnet --download-genesis 
    ```
    produces the following output :
    ```bash
@@ -232,8 +232,8 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
     2022-07-14T17:20:26.244006Z  INFO near: Using key ed25519:14Pbi1rtMo4s9PqxfxB3mLxz4FQdKQaDVm1KYKU7sT1S for node
     2022-07-14T17:20:26.244057Z  INFO near: Downloading genesis file from: https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json.xz ...
     [00:00:00] [####################################################################################################################################################################################] 1.11KB/1.11KB [5.82MB/s] (0s)
-    2022-07-14T17:20:27.068464Z  INFO near: Saved the genesis file to: /home/abahmane/.near/genesis.json ...
-    2022-07-14T17:20:27.082573Z  INFO near: Generated for shardnet network node key and genesis file in /home/abahmane/.near
+    2022-07-14T17:20:27.068464Z  INFO near: Saved the genesis file to: /home/aitbelhaj/.near/genesis.json ...
+    2022-07-14T17:20:27.082573Z  INFO near: Generated for shardnet network node key and genesis file in /home/aitbelhaj/.near
    ```
 
    * Replace the config.json
@@ -241,19 +241,19 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    In config.json, change these two parameters : **boot_nodes** and **tracked_shards**
 
    ````bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ rm ~/.near/config.json
-   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ rm ~/.near/config.json
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-
     deploy/shardnet/config.json
    --2022-07-14 21:22:48--  https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json
    Resolving s3-us-west-1.amazonaws.com (s3-us-west-1.amazonaws.com)... 52.219.116.232
    Connecting to s3-us-west-1.amazonaws.com (s3-us-west-1.amazonaws.com)|52.219.116.232|:443... connected.
    HTTP request sent, awaiting response... 200 OK
    Length: 3647 (3.6K) [application/json]
-   Saving to: ‘/home/abahmane/.near/config.json’
+   Saving to: ‘/home/aitbelhaj/.near/config.json’
 
-   /home/abahmane/.near/config.json                         100%[===============================================================================================================================>]   3.56K  --.-KB/s    in 0s
+   /home/aitbelhaj/.near/config.json                         100%[===============================================================================================================================>]   3.56K  --.-KB/s    in 0s
 
-   2022-07-14 21:22:49 (112 MB/s) - ‘/home/abahmane/.near/config.json’ saved [3647/3647]
+   2022-07-14 21:22:49 (112 MB/s) - ‘/home/aitbelhaj/.near/config.json’ saved [3647/3647]
    ````
 
   * Get the latest state snapshot 
@@ -261,13 +261,13 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   Install aws Cli
   
   ````bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo apt-get install awscli -y
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo apt-get install awscli -y
   ````
   Then
   
   ````bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ cd ~/.near
-  abahmane@Ubuntu-2004-focal-64-minimal:~/.near$ aws s3 --no-sign-request cp s3://build.openshards.io/stakewars/shardnet/data.tar.gz .
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ cd ~/.near
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/.near$ aws s3 --no-sign-request cp s3://build.openshards.io/stakewars/shardnet/data.tar.gz .
   tar -xzvf data.tar.gz
    ````
 
@@ -275,16 +275,16 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   
   You can start your node by  running the following command under nearcore folder:
   ````bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$./target/release/neard --home ~/.near run
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$./target/release/neard --home ~/.near run
   ````
   The command produces the following output:
   
   ````bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo ./target/release/neard --home ~/.near run
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo ./target/release/neard --home ~/.near run
   2022-07-14T21:29:49.419836Z  INFO neard: version="trunk" build="crates-0.14.0-216-g96f13d239" latest_protocol=100
   2022-07-14T21:29:49.427357Z  INFO db: Created a new RocksDB instance. num_instances=1
   2022-07-14T21:29:49.424828Z  INFO db: Dropped a RocksDB instance. num_instances=0
-  2022-07-14T21:29:49.427836Z  INFO near: Opening RocksDB database path=/home/abahmane/.near/data
+  2022-07-14T21:29:49.427836Z  INFO near: Opening RocksDB database path=/home/aitbelhaj/.near/data
   2022-07-14T21:29:49.494753Z  INFO db: Created a new RocksDB instance. num_instances=1
   2022-07-14T21:29:49.512921Z  INFO near_network::peer_manager::peer_manager_actor: Bandwidth stats total_bandwidth_used_by_all_peers=0 total_msg_received_count=0 max_max_record_num_messages_in_progress=0
   2022-07-14T21:29:49.520805Z  INFO stats: #  941069 Waiting for peers 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 0%, Mem: 60.1 MB
@@ -308,7 +308,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   Run the command : 
    
    ````bash
-    abahmane@Ubuntu-2004-focal-64-minimal:~$ near login
+    aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ near login
    ````
 
   You will see the following outpu :
@@ -346,8 +346,8 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   ````bash
   Which account did you authorize for use with NEAR CLI?
   Enter it here (if not redirected automatically):
-  abahmane.shardnet.near
-  Logged in as [ abahmane.shardnet.near ] with public key [ ed25519:ATjazw... ] successfully
+  aitbelhaj.shardnet.near
+  Logged in as [ aitbelhaj.shardnet.near ] with public key [ ed25519:ATjazw... ] successfully
  ````
 
  * Check the validator_key.json
@@ -355,37 +355,37 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   Run the following command :
 
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~$ cat ~/.near/validator_key.json
-  cat: /home/abahmane/.near/validator_key.json: No such file or directory
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ cat ~/.near/validator_key.json
+  cat: /home/aitbelhaj/.near/validator_key.json: No such file or directory
   ```
   If the file is not present, generate one like this :
 
    ```bash
-    near generate-key <pool_id> , (pool_id = account-id = abahmane in our case)
+    near generate-key <pool_id> , (pool_id = account-id = ait-belhaj in our case)
    ```
 
   Copy the file generated to shardnet folder and be sure to replace <pool_id> by your accountId
    
    ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~$ cp ~/.near-credentials/shardnet/abahmane.shardnet.near.json ~/.near/validator_key.json
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~$ cp ~/.near-credentials/shardnet/aitbelhaj.shardnet.near.json ~/.near/validator_key.json
    ```
    
    Edit ~/.near/validator_key.json file and change the following :
 
-       1. “account_id” to xxxx.factory.shardnet.near, where xxxx is the Pool_Name (Pool_Name=abahmane in our case)
-       2. private_key to secret_key
+       1. “account_id” to xxxx.factory.shardnet.near, where xxxx is the Pool_Name (Pool_Name=ait-belhaj in our case)
+       2.  private_key to secret_key
    
   
   * Start the node
   
   ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ target/release/neard run
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ target/release/neard run
    ```
 
   * Install the node Service 
  
    ```bash
-    abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo vi /etc/systemd/system/neard.service
+    aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo vi /etc/systemd/system/neard.service
    ```
     
    **Copy and paste the following**
@@ -408,24 +408,24 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    WantedBy=multi-user.target
   ```
   
-  repalce **<USER>** by a non-root user (<USER>=abahmane in our case)
+  repalce **<USER>** by a non-root user (<USER>=aitbelhaj in our case)
 
   * Enable neard service 
 
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo systemctl enable neard
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo systemctl enable neard
   ```
   
   * Start the node
   
   ```bash 
-  abahmane@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo systemctl start neard
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo systemctl start neard
   ```
    
  You can check the node logs by issuing the following command
 
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~/.near$ journalctl -n 100 -f -u neard
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/.near$ journalctl -n 100 -f -u neard
   ```
  
  Which will show the following output:
@@ -436,12 +436,12 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   You can install bundle 'ccze' to print pretty logs
  
   ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal:~/.near$ sudo apt install ccze
+  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/.near$ sudo apt install ccze
   ```
   Running the command
  
   ```bash
-   abahmane@Ubuntu-2004-focal-64-minimal:~/.near$ journalctl -n 100 -f -u neard | ccze -A
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/.near$ journalctl -n 100 -f -u neard | ccze -A
   ```
   will print the following logs:
 

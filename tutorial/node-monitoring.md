@@ -69,11 +69,19 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
   aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators next 
  ```
  
+  <br/><br/>
+![node_01](../assets/monitoring/next_valid.png "node_01") 
+ <br/><br/>
+ 
  * Get the current set of active validators:
  
  ```bash
   aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators current 
  ```
+ 
+  <br/><br/>
+![node_01](../assets/monitoring/current_valid.png "node_01") 
+ <br/><br/>
  
  * Check if yours is amongst them 
   

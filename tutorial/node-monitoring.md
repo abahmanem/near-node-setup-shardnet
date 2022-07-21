@@ -361,7 +361,7 @@ Open Near Node Exporter Full dashboard
  
  We are going to add an Alert on seat price : 
  
- condition :  **If  near_seat_price drops below 300 NEAR, send an email alert** , an alert will be sent by Email
+ condition :  **If  near_seat_price drops below 300 NEAR, send an email alert** 
  
  
  Create an alert rule

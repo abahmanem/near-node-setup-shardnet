@@ -57,7 +57,7 @@
 
  ## Ping
 
- A Ping should be issued each epoch to keep track of rewards.
+ A Ping should be issued freequently to be illigible for rewards.
 
  To run a Ping, use the following command:
 
@@ -90,7 +90,9 @@
  ![joining](../assets/staking/active.png "join") 
   <br/><br/>
   
- So it takes at least 2 Epochs after setting up the node to see it in the list of active validators on https://explorer.shardnet.near.org/nodes/validators
+ So it takes at least 2 Epochs after setting up the node to see it in the list of active validators on 
+ 
+ https://explorer.shardnet.near.org/nodes/validators
  
  
  From time to time,The node may be kicked out for many reason, the most common is when the node did not produce the expected number of blocks.
@@ -124,7 +126,7 @@ aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$curl -s -d '{"jsonrpc": "2.0",
 }
  ```
  
- This means that the node was kicked out because it has produced only 13 blcocks out of the 20 excpected in that Epoch.
+ This means that the node was slashed because it has produced only 13 blcocks out of the 20 excpected in that Epoch.
  
  
  You need to Ping the network to become active again. 

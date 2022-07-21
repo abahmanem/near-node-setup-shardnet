@@ -126,13 +126,13 @@ aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$curl -s -d '{"jsonrpc": "2.0",
 }
  ```
  
- This means that the node was slashed because it has produced only 13 blcocks out of the 20 excpected in that Epoch.
+ This means that the node was slashed because it has produced only 13 blocks out of the 20 excpected in that Epoch.
  
  
  You need to Ping the network to become active again. 
  
    
-  To avoid node eviction, You can add a crontab job to do a ping every half-epoch:
+  To avoid node eviction, You can add a crontab job to do a ping frequently (example: every half-epoch):
  
  ```bash
  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo crontab -e
@@ -143,5 +143,7 @@ aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$curl -s -d '{"jsonrpc": "2.0",
  ```
 
 <br/><br/>
+
+
 
   [Next Step : Node monitoring](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/node-monitoring.md)

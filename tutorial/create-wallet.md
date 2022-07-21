@@ -2,7 +2,7 @@
 
 ## Create your Shardnet wallet
 
-In this section, we will learn how to create a Shardnet wallet
+In this section, we will learn how to create an account in  Shardnet network
 
   1- Navigate to  https://wallet.shardnet.near.org and press Create account
   <br/><br/>

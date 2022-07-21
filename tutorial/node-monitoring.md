@@ -13,7 +13,7 @@ diff <(curl -s https://rpc.shardnet.near.org/status | jq .version) <(curl -s htt
  you can check if your node is up and runing by runing the followng command:
  
  ```bash
- abahmane@Ubuntu-2004-focal-64-minimal ~ # sudo systemctl status neard
+ aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # sudo systemctl status neard
  
  ```
  
@@ -27,7 +27,7 @@ diff <(curl -s https://rpc.shardnet.near.org/status | jq .version) <(curl -s htt
       Tasks: 85 (limit: 77021)
      Memory: 21.8G
      CGroup: /system.slice/neard.service
-             └─2918447 /home/abahmane/nearcore/target/release/neard run
+             └─2918447 /home/aitbelhaj/nearcore/target/release/neard run
 
 Jul 19 22:04:41 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:04:41.462522Z  INFO stats: # 1015961 Gu6VuArUKFS3Mm7vNwcxjgSrmmgyn7V8AkP7qoE57iBR Validator | 97 validators 34 peers ⬇ 397 kB/s ⬆ 685 kB/s 0.60 bps 21.1 Tgas/s>
 Jul 19 22:04:41 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:04:41.462848Z DEBUG stats: EpochId(`GiKXd3r5VQdxrvCKdcreSmQseYMD5fAbbS4fknnbnrgW`) Blocks in progress: 48 Chunks in progress: 0 Orphans: 0
@@ -46,7 +46,7 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  * Check your node logs
  
  ```bash
- abahmane@Ubuntu-2004-focal-64-minimal ~ # journalctl -n 100 -f -u neard | ccze -A
+ aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # journalctl -n 100 -f -u neard | ccze -A
  ```
  
  Will show the following 
@@ -66,25 +66,25 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
   * Get the next Epoch set of active validators:
  
  ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators next 
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators next 
  ```
  
  * Get the current set of active validators:
  
  ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators current 
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators current 
  ```
  
  * Check if yours is amongst them 
   
  ```bash
-  abahmane@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators current | grep abahmane.factory.shardnet.near
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # NEAR_ENV=shardnet  near validators current | grep ait-belhaj.factory.shardnet.near
  ```
  
  If your node is not slashed, this command will print a line corresponding to your staking pool id :
  
  ```bash
- | abahmane.factory.shardnet.near           | 45,317    | 1       | 91.57%   |             100 |             127 |            1638 |            1771 |
+ | ait-belhaj.factory.shardnet.near           | 1930   | 1       | 91.57%   |             100 |             127 |            1638 |            1771 |
  ```
  
   * Check your current stake
@@ -98,7 +98,7 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  Example:
  
  ```bash
- abahmane@Ubuntu-2004-focal-64-minimal ~ # near validators current | awk '/abahmane.factory.shardnet.near/ {print $4}'
+ aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # near validators current | awk '/ait-belhaj.factory.shardnet.near/ {print $4}'
 45,317
  
  ```
@@ -114,8 +114,8 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  Example : 
  
  ```bash
- abahmane@Ubuntu-2004-focal-64-minimal ~ # near validators next | grep "Kicked out" | grep "abahmane.factory.shardnet.near"
-| Kicked out | abahmane.factory.shardnet.near                | -                | -       |
+ aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # near validators next | grep "Kicked out" | grep "ait-belhaj.factory.shardnet.near"
+| Kicked out | ai-tbelhaj.factory.shardnet.near                | -                | -       |
  ```
   
  
@@ -137,8 +137,8 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
 Example: 
 
 ```bash
-abahmane@Ubuntu-2004-focal-64-minimal ~ #
- curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json'   https://rpc.shardnet.near.org | jq -c '.result.next_validators[] | select(.account_id | contains ("abahmane.factory.shardnet.near"))'
+aitbelhaj@Ubuntu-2004-focal-64-minimal ~ #
+ curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json'   https://rpc.shardnet.near.org | jq -c '.result.next_validators[] | select(.account_id | contains ("ait-belhaj.factory.shardnet.near"))'
 ```
 
 if the result is empty, you wont have a seat in the next active validator set.
@@ -152,7 +152,7 @@ If you are not in the current active slot, You can query the RCP endpoint about 
 Example :
 
 ```bash
- abahmane@Ubuntu-2004-focal-64-minimal ~ # curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' \ https://rpc.shardnet.near.org | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("abahmane.factory.shardnet.near"))' | jq .reason
+ aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' \ https://rpc.shardnet.near.org | jq -c '.result.prev_epoch_kickout[] | select(.account_id | contains ("ait-belhaj.factory.shardnet.near"))' | jq .reason
  ```
  
  gives :
@@ -173,14 +173,14 @@ Example :
  ### Install Docker
  
  ```bash
- sudo apt-get update
- sudo apt install docker.io
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # sudo apt-get update
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # sudo apt install docker.io
  ```
  
   ### Run Node Exporter on the Node
  
  ```bash
- sudo docker run -dit \
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # sudo docker run -dit \
     --restart always \
     --volume /proc:/host/proc:ro \
     --volume /sys:/host/sys:ro \
@@ -194,7 +194,7 @@ Example :
    ### Run Node Exporter on the Node
  
  ```bash
- sudo docker run -dit \
+ aitbelhaj@Ubuntu-2004-focal-64-minimal ~ #  sudo docker run -dit \
     --restart always \
     --volume /proc:/host/proc:ro \
     --volume /sys:/host/sys:ro \
@@ -207,19 +207,19 @@ Example :
  
  It is necessary to open port 9100 so that Prometheus can collect the data form the node. 
  
-### Build your own image
+ ### Build your own image
  
  
-```bash
-git clone https://github.com/masknetgoal634/near-prometheus-exporter
-cd near-prometheus-exporter
-sudo docker build -t near-prometheus-exporter .
+  ```bash
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # git clone https://github.com/masknetgoal634/near-prometheus-exporter
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # cd near-prometheus-exporter
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # sudo docker build -t near-prometheus-exporter .
   ```
  
-Run image on docker:
+ Run image on docker:
 
-```bash
-sudo docker run -dit \
+ ```bash
+  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # sudo docker run -dit \
     --restart always \
     --name near-exporter \
     --network=host \
@@ -257,7 +257,7 @@ Edit  prometheus/prometheus.yml and add the IP address of your node:
 ### Run Prometheus 
 
 ```bash
-sudo docker run -dti \
+ aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # sudo docker run -dti \
     --restart always \
     --volume $(pwd)/prometheus:/etc/prometheus/ \
     --name prometheus \

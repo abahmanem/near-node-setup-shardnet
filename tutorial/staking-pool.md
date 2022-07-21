@@ -130,7 +130,7 @@ aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$curl -s -d '{"jsonrpc": "2.0",
  You need to Ping the network to become active again. 
  
    
-  To avoid node eviction, You can add a crontab job to do a ping every half-epoch (1.5 or 2 hours) :
+  To avoid node eviction, You can add a crontab job to do a ping every half-epoch:
  
  ```bash
  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo crontab -e

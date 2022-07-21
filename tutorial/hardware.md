@@ -41,6 +41,6 @@ For this guide, we are using a [Hetzner](https://hetzner.com) cloud server with 
   Supported
   ```
 
-[Next Step : Deploying the node](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/create-wallet.md)
+[Next Step : Create Wallet](https://github.com/abahmanem/near-node-setup-shardnet/blob/main/tutorial/create-wallet.md)
  
   

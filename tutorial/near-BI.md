@@ -77,5 +77,7 @@ CREATE TABLE current_validators (
 
 
 
+## Node JS
 
+  npm install pg
 

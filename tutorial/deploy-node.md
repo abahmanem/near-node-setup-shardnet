@@ -243,7 +243,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ rm ~/.near/config.json
    aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-
     deploy/shardnet/config.json
-   --2022-07-14 21:22:48--  https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json
+   --2022-07-20 21:22:48--  https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json
    Resolving s3-us-west-1.amazonaws.com (s3-us-west-1.amazonaws.com)... 52.219.116.232
    Connecting to s3-us-west-1.amazonaws.com (s3-us-west-1.amazonaws.com)|52.219.116.232|:443... connected.
    HTTP request sent, awaiting response... 200 OK

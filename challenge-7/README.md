@@ -64,15 +64,17 @@ Connect to  the database
 Create a table for our challenge : current_validators
 
 ```bash
-CREATE TABLE current_validators (
-	account_id VARCHAR ( 250 ) PRIMARY KEY,
-	is_slashed BOOLEAN  UNIQUE NOT NULL,
+CREATE TABLE current_validators(
+  account_id VARCHAR ( 250 ) NOT NULL,
+	public_key VARCHAR ( 255 )  NOT NULL,
+	is_slashed BOOLEAN  NOT NULL,
 	num_expected_blocks INT NOT NULL,
+	num_produced_blocks INT NOT NULL,
+	num_expected_chunks INT NOT NULL,
 	num_produced_chunks INT NOT NULL,
-	public_key VARCHAR ( 255 ) UNIQUE  NOT NULL,
 	shards  INT  NOT NULL,
 	stake VARCHAR ( 255 )  NOT NULL,
-	rpc_timestamp TIMESTAMP NOT NULL,
+	rpc_timestamp TIMESTAMP NOT NULL
 );
 ```
 

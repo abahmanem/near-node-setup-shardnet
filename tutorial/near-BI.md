@@ -17,7 +17,7 @@
 Run the following command 
   
  ```bash 
-docker-compose -f docker-compose-non-dev.yml pull
+sudo docker-compose -f docker-compose-non-dev.yml pull
 ```
 
 Edit docker-compose-non-dev.yml
@@ -36,7 +36,7 @@ Edit docker-compose-non-dev.yml
   Start superset in as a backgroud process:
 
 ```bash
-docker-compose -f docker-compose-non-dev.yml up -d 
+sudo docker-compose -f docker-compose-non-dev.yml up -d
 ```
 
 

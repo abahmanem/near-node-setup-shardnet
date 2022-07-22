@@ -1,9 +1,8 @@
 
-
-```java
-
 const request = require('request');
+
 const { Pool, Client } = require("pg");
+
 const pool = new Pool({
 user: "superset",
 host: "xxx.xxx.xxx.xxx",
@@ -11,10 +10,12 @@ database: "stakewars_iii",
 password: "xxxxxxxxxxxxx",
 port: 5432,
 });
+
 //RPC Call
 let options = {
 url: "http://xxx.xxx.xxx.xxx:3030",
 method: "post",
+
 headers:
 {
 "content-type": "Application/json"
@@ -73,4 +74,3 @@ current_validators.forEach(function(e){
 
 });
 //pool.end();
-```

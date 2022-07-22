@@ -31,7 +31,7 @@ Edit docker-compose-non-dev.yml
   
   ```bash
   ports:
-    - "5433:5432"
+    - "5432:5432"
   ```
   
   Start superset in as a backgroud process:

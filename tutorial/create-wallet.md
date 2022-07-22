@@ -26,12 +26,12 @@ In this section, we will learn how to create an account in  Shardnet network
    ![server](../assets/wallet/wallet_04.png "server")
   <br/><br/>
   
-  5- You are asked to verify a given work from your secure paraphrase, enter it and press verify and complete
+  5- You are asked to verify a given word from your secure paraphrase, enter it and press verify and complete
   <br/><br/>
    ![server](../assets/wallet/wallet_05.png "server")
 <br/><br/>
   
-  6-Now , you are asked to verify the whole 12 work of teh paraphrase, enter them all and press Find my Account
+  6-Now , you are asked to verify the whole 12 words of teh paraphrase, enter them all and press Find my Account
   <br/><br/>
    ![server](../assets/wallet/wallet_07.png "server")
 <br/><br/>

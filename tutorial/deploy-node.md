@@ -227,12 +227,12 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    ```
    produces the following output :
    ```bash
-    2022-07-14T17:20:26.243764Z  INFO neard: version="trunk" build="crates-0.14.0-216-g96f13d239" latest_protocol=100
-    2022-07-14T17:20:26.244006Z  INFO near: Using key ed25519:14Pbi1rtMo4s9PqxfxB3mLxz4FQdKQaDVm1KYKU7sT1S for node
-    2022-07-14T17:20:26.244057Z  INFO near: Downloading genesis file from: https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json.xz ...
+    2022-07-204T17:20:26.243764Z  INFO neard: version="trunk" build="crates-0.14.0-234-g0f81dca95" latest_protocol=100
+    2022-07-20T17:20:26.244006Z  INFO near: Using key ed25519:FakAh23f8U4swHECgCFWfskuuLscA2cwafdVAKJyUCg for node
+    2022-07-20T17:20:26.244057Z  INFO near: Downloading genesis file from: https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json.xz ...
     [00:00:00] [####################################################################################################################################################################################] 1.11KB/1.11KB [5.82MB/s] (0s)
-    2022-07-14T17:20:27.068464Z  INFO near: Saved the genesis file to: /home/aitbelhaj/.near/genesis.json ...
-    2022-07-14T17:20:27.082573Z  INFO near: Generated for shardnet network node key and genesis file in /home/aitbelhaj/.near
+    2022-07-204T17:20:27.068464Z  INFO near: Saved the genesis file to: /home/aitbelhaj/.near/genesis.json ...
+    2022-07-204T17:20:27.082573Z  INFO near: Generated for shardnet network node key and genesis file in /home/aitbelhaj/.near
    ```
 
    * Replace the config.json
@@ -252,7 +252,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
 
    /home/aitbelhaj/.near/config.json                         100%[===============================================================================================================================>]   3.56K  --.-KB/s    in 0s
 
-   2022-07-14 21:22:49 (112 MB/s) - ‘/home/aitbelhaj/.near/config.json’ saved [3647/3647]
+   2022-07-20 21:22:49 (112 MB/s) - ‘/home/aitbelhaj/.near/config.json’ saved [3647/3647]
    ````
 
   * Get the latest state snapshot 
@@ -280,24 +280,24 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   
   ````bash
   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo ./target/release/neard --home ~/.near run
-  2022-07-14T21:29:49.419836Z  INFO neard: version="trunk" build="crates-0.14.0-216-g96f13d239" latest_protocol=100
-  2022-07-14T21:29:49.427357Z  INFO db: Created a new RocksDB instance. num_instances=1
-  2022-07-14T21:29:49.424828Z  INFO db: Dropped a RocksDB instance. num_instances=0
-  2022-07-14T21:29:49.427836Z  INFO near: Opening RocksDB database path=/home/aitbelhaj/.near/data
-  2022-07-14T21:29:49.494753Z  INFO db: Created a new RocksDB instance. num_instances=1
-  2022-07-14T21:29:49.512921Z  INFO near_network::peer_manager::peer_manager_actor: Bandwidth stats total_bandwidth_used_by_all_peers=0 total_msg_received_count=0 max_max_record_num_messages_in_progress=0
-  2022-07-14T21:29:49.520805Z  INFO stats: #  941069 Waiting for peers 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 0%, Mem: 60.1 MB
-  2022-07-14T21:29:49.520858Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
-  2022-07-14T21:29:49.521893Z  INFO stats: #  941069 Waiting for peers 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 92%, Mem: 155 MB
-  2022-07-14T21:29:49.521944Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
-  2022-07-15T21:29:49.522780Z  INFO stats: #  941069 Downloading headers 1.73% (29355 left; at 941585) 5 peers ⬇ 109 kB/s ⬆ 109 kB/s 0.00 bps 0 gas/s CPU: 51%, Mem: 278 MB
-  2022-07-14T21:29:49.522832Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
-  2022-07-14T21:29:50.148486Z  INFO stats: #  941069 Downloading headers 3.45% (28843 left; at 942101) 7 peers ⬇ 349 kB/s ⬆ 328 kB/s 0.00 bps 0 gas/s CPU: 52%, Mem: 318 MB
-  2022-07-14T21:29:50.148520Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
-  2022-07-15T21:29:50.476642Z  INFO stats: #  941069 Downloading headers 6.90% (27821 left; at 943131) 8 peers ⬇ 596 kB/s ⬆ 493 kB/s 0.00 bps 0 gas/s CPU: 48%, Mem: 291 MB
-  2022-07-14T21:29:50.476676Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
-  2022-07-15T21:29:50.478761Z  INFO stats: #  941069 Downloading headers 12.09% (26284 left; at 944684) 9 peers ⬇ 780 kB/s ⬆ 551 kB/s 0.00 bps 0 gas/s CPU: 60%, Mem: 320 MB
-  2022-07-14T21:29:50.478812Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-20T21:29:49.419836Z  INFO neard: version="trunk" build="crates-0.14.0-216-g96f13d239" latest_protocol=100
+  2022-07-20T21:29:49.427357Z  INFO db: Created a new RocksDB instance. num_instances=1
+  2022-07-20T21:29:49.424828Z  INFO db: Dropped a RocksDB instance. num_instances=0
+  2022-07-20T21:29:49.427836Z  INFO near: Opening RocksDB database path=/home/aitbelhaj/.near/data
+  2022-07-20T21:29:49.494753Z  INFO db: Created a new RocksDB instance. num_instances=1
+  2022-07-20T21:29:49.512921Z  INFO near_network::peer_manager::peer_manager_actor: Bandwidth stats total_bandwidth_used_by_all_peers=0 total_msg_received_count=0 max_max_record_num_messages_in_progress=0
+  2022-07-20T21:29:49.520805Z  INFO stats: #  941069 Waiting for peers 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 0%, Mem: 60.1 MB
+  2022-07-20T21:29:49.520858Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-20T21:29:49.521893Z  INFO stats: #  941069 Waiting for peers 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 92%, Mem: 155 MB
+  2022-07-20T21:29:49.521944Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-20T21:29:49.522780Z  INFO stats: #  941069 Downloading headers 1.73% (29355 left; at 941585) 5 peers ⬇ 109 kB/s ⬆ 109 kB/s 0.00 bps 0 gas/s CPU: 51%, Mem: 278 MB
+  2022-07-20T21:29:49.522832Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-20T21:29:50.148486Z  INFO stats: #  941069 Downloading headers 3.45% (28843 left; at 942101) 7 peers ⬇ 349 kB/s ⬆ 328 kB/s 0.00 bps 0 gas/s CPU: 52%, Mem: 318 MB
+  2022-07-20T21:29:50.148520Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-20T21:29:50.476642Z  INFO stats: #  941069 Downloading headers 6.90% (27821 left; at 943131) 8 peers ⬇ 596 kB/s ⬆ 493 kB/s 0.00 bps 0 gas/s CPU: 48%, Mem: 291 MB
+  2022-07-20T21:29:50.476676Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
+  2022-07-20T21:29:50.478761Z  INFO stats: #  941069 Downloading headers 12.09% (26284 left; at 944684) 9 peers ⬇ 780 kB/s ⬆ 551 kB/s 0.00 bps 0 gas/s CPU: 60%, Mem: 320 MB
+  2022-07-20T21:29:50.478812Z DEBUG stats: EpochId(`Bz9n5HbzLd5Bmsuoc15xbKkJnuuMgNJm8YYb2qMngT2E`) Blocks in progress: 0 Chunks in progress: 0 Orphans: 0
   ````
 
   * Authorize Wallet Locally

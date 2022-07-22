@@ -255,20 +255,20 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    2022-07-20 21:22:49 (112 MB/s) - ‘/home/aitbelhaj/.near/config.json’ saved [3647/3647]
    ````
 
-  * Get the latest state snapshot 
+  * Get the latest state snapshot (No need after hard forks)
 
   Install aws Cli
   
   ````bash
   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ sudo apt-get install awscli -y
   ````
-  Then
   
-  ````bash
-  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ cd ~/.near
-  aitbelhaj@Ubuntu-2004-focal-64-minimal:~/.near$ aws s3 --no-sign-request cp s3://build.openshards.io/stakewars/shardnet/data.tar.gz .
-  tar -xzvf data.tar.gz
-   ````
+  Download snapshot (genesis.json)
+
+ ````bash
+ cd ~/.near
+ wget https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json
+ ````
 
   * Run the node
   

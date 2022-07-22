@@ -1,17 +1,17 @@
-```nodejs
+```java
 const request = require('request');
 const { Pool, Client } = require("pg");
 const pool = new Pool({
   user: "superset",
-  host: "135.181.223.120",
+  host: "xxx.xxx.xxx.xxx",
   database: "stakewars_iii",
-  password: "superset",
+  password: "xxxxxxxxxxxxx",
   port: 5432,
 });
 
 //RPC Call
 let options = {
-    url: "http://135.181.223.120:3030",
+    url: "http://xxx.xxx.xxx.xxx:3030",
     method: "post",
     headers:
     {

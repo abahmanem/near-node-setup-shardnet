@@ -197,12 +197,11 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
    aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ git fetch
    ``` 
     
-  checkout to the master branch 
+  checkout the commit 0f81dca95a55f975b6e54fe6f311a71792e21698
    
    ```bash
-   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ git checkout master
-   Already on 'master'
-   Your branch is up to date with 'origin/master'.
+   aitbelhaj@Ubuntu-2004-focal-64-minimal:~/nearcore$ git checkout 0f81dca95a55f975b6e54fe6f311a71792e21698
+   HEAD is now at 0f81dca95 Display block and chunk producers of an epoch (#7222)
    ``` 
    Compile nearcore binary, run the following commands in the nearcore folder :
   

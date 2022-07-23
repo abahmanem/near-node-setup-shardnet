@@ -1,7 +1,7 @@
 
 In this challenge, we are going to produce some charts using the data from the shardnet network.
 
-We are going to use RPC call to fetch datas frequently so the charts are updated frequently.
+We are going to use RPC call to fetch datas frequently so the charts data keeps up to date.
 
 We will use [Apache superSet](https://superset.apache.org/) as data exploration and visualization tool. 
 

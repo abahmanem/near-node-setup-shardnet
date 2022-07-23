@@ -274,7 +274,7 @@ We are going to populate these two tables using a node js script that does calls
   
   
   
-  ## Chart 2 : Slashing
+  ## Chart 3 : Slashing
   
   This chart shows statistics about slashing among nodes. We an see which nodes are often slashed overt time.
   This can give an idea about node maintenance.

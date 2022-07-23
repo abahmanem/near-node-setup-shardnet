@@ -226,14 +226,16 @@ We are going to populate these two tables using a node js script that does calls
   ![bi](../assets/bi/dashboard.png "bi") 
   <br/><br/>
  
+  sffdf
+     dfgdfg
+     dfgdfgdf
+     dfgdfg
+    
+ 
  The chart will update continously as new data are injected in the database.
  We can also add filter to the online chart.
   
   
      
      
-     sffdf
-     dfgdfg
-     dfgdfgdf
-     dfgdfg
     

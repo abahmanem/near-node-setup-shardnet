@@ -246,7 +246,9 @@ We are going to populate these two tables using a node js script that does calls
     
  * Onboard more nodes in the netword. Lower the price seat.
     
- * The Near team or the foundation managing the Near tokens can stake more on the little nodes to promote decentralization.
+ * The Near team or the foundation managing the Near tokens can stake more on the smallest nodes to promote decentralization.
+
+ * For the 200-300 nodes that will be added to network as per StakeWars 3 phase, promote and advertize these nodes.  
 
  
      

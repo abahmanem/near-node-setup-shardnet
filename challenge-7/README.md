@@ -53,15 +53,15 @@ psql -U superset
 Create a database for our challenge 
 
 ```bash
-CREATE DATABASE stakeWars_iii;
+CREATE DATABASE stakewars3;
 ```
 Connect to  the database 
 
 ```bash
-\c stakeWars_iii
+\c stakewars3;
 ```
 
-Create a table for our challenge : current_validators
+Create 2 tables for our challenge : current_validators and prev_epoch_kickout.
 
 ```bash
 CREATE TABLE current_validators(
@@ -80,6 +80,17 @@ CREATE TABLE current_validators(
 ```
 
 
+```bash
+CREATE TABLE prev_epoch_kickout(
+  account_id VARCHAR ( 250 ) NOT NULL,
+  epoch_height INT  NOT NULL,
+  rpc_timestamp TIMESTAMP NOT NULL
+);
+
+```
+
+
+We are going to populate these two tables using a node js script that does calls  to RPC endpiont every epoch.
 
 ## Node JS
 

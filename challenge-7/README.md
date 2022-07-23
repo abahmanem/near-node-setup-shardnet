@@ -234,9 +234,9 @@ We are going to populate these two tables using a node js script that does calls
  
  This chart shows that one of the trilemas that the POS blockchain tries to solve is broken:Decentralization.
     
-    A few nodes have more than 80% of the total stake.
+ few nodes have more than 80% of the total stake.
     
-    If they go offline at the same time, the network may broke and this is not healthy for the netowrk.
+ If they go offline at the same time, the network may broke and this is not healthy for the netowrk.
     
     Solutions :
     

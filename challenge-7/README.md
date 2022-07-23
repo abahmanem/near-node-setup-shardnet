@@ -258,7 +258,7 @@ We are going to populate these two tables using a node js script that does calls
     
  * Cap the total stake per node if faisible.
  
- * Cap the number of delegators per node (at least temporarilly) : no more than 1000 delegator per node, an error message can be thrown when a 		delegator tries to delegate to a node that has reached the treshold of 1000 delegators.
+ * Cap the number of delegators per node (at least temporarilly) : no more than 1000 delegator per node, an error message can be thrown when a 		delegator tries to delegate to a node that has reached the threshold of 1000 delegators.
     
  * Onboard more nodes in the netword. Lower the price seat.
     

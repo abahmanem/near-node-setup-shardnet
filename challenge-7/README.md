@@ -73,7 +73,8 @@ CREATE TABLE current_validators(
 	num_expected_chunks INT NOT NULL,
 	num_produced_chunks INT NOT NULL,
 	shards  INT  NOT NULL,
-	stake VARCHAR ( 255 )  NOT NULL,
+	stake decimal   NOT NULL,
+	epoch_height INT  NOT NULL,
 	rpc_timestamp TIMESTAMP NOT NULL
 );
 ```

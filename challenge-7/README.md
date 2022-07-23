@@ -1,7 +1,11 @@
 
+In this challenge, we are going to produce some charts using the data from the shardnet network.
 
+We are going to use RPC call to fetch datas frequently so the charts are updated frequently.
 
-# Apache superSet
+We will use [Apache superSet](https://superset.apache.org/) as data exploration and visualization tool. 
+
+## Install Apache superSet
  
   Clone Superset's repo 
  
@@ -41,8 +45,13 @@ sudo docker-compose -f docker-compose-non-dev.yml up -d
 ```
 
 
+## Create postgresql BI Tables
+
+We will use postgresql to creates table that Apache superSet will use to explore 
+
 
 Connect to postgresql 
+
 ```bash
 sudo docker exec -it superset_db bash
 
@@ -92,7 +101,8 @@ CREATE TABLE prev_epoch_kickout(
 
 We are going to populate these two tables using a node js script that does calls  to RPC endpiont every epoch.
 
-## Node JS
+## Create a Node JS appli to populate the tables
+
 
   *  install  nodejs modules pg and request
   
@@ -205,8 +215,7 @@ We are going to populate these two tables using a node js script that does calls
   <br/><br/>
   
   
- 
- Save the chart to the dashboad :
+  Save the chart to the dashboad :
  
   <br/><br/>
   ![bi](../assets/bi/add_chart3.png "bi") 
@@ -220,9 +229,11 @@ We are going to populate these two tables using a node js script that does calls
   <br/><br/>
  
  The chart will update continously as new data are injected in the database.
- You can also add filter to the online chart
+ We can also add filter to the online chart.
   
   
+  
+  ## Thoughts on STAKE_DISTRIBUTION_DECENTRALIZATION chart
   
     This chart shows that one of the trilema that the POS blockchain tries to solve is broken:Decentralization.
     

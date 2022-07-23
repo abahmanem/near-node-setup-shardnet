@@ -223,7 +223,6 @@ We are going to populate these two tables using a node js script that does calls
  You can also add filter to the online chart
   
   
-  ## Thoughts on STAKE_DISTRIBUTION_DECENTRALIZATION chart
   
     This chart shows that one of the trilema that the POS blockchain tries to solve is broken:Decentralization.
     

@@ -219,4 +219,6 @@ We are going to populate these two tables using a node js script that does calls
   ![bi](../assets/bi/dashboard.png "bi") 
   <br/><br/>
  
+ The chart will update continously as new data are injected in the database.
+ You can also add filter to the online chart
   

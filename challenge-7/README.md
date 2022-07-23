@@ -252,7 +252,9 @@ We are going to populate these two tables using a node js script that does calls
     
  If they go offline at the same time, the network may broke and this is not healthy for the netowrk.
     
- Recommendations :
+**Recommendations**
+
+ * Communicate to users (via telegram, discord, twitter etc...) to stake more on small nodes.
     
  * Cap the total stake per node if faisible.
  
@@ -277,6 +279,8 @@ We are going to populate these two tables using a node js script that does calls
   This chart shows statistics about slashing among nodes. We an see which nodes are often slashed overt time.
   This can give an idea about node maintenance.
   We can communicate and support these node operators to help them join the network quickly.
+  We can use a smart contract to help validators add the contact info to reach them quickly.
+  
   
   
     

@@ -231,7 +231,7 @@ We are going to populate these two tables using a node js script that does calls
   
   
   
- 
+  ## Thoughts on STAKE_DISTRIBUTION_DECENTRALIZATION chart
   
     This chart shows that one of the trilemas that the POS blockchain tries to solve is broken:Decentralization.
     
@@ -252,4 +252,9 @@ We are going to populate these two tables using a node js script that does calls
     
     
      
+     
+     sffdf
+     dfgdfg
+     dfgdfgdf
+     dfgdfg
     

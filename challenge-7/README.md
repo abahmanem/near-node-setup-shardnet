@@ -219,7 +219,9 @@ We are going to populate these two tables using a node js script that does calls
   ![bi](../assets/bi/add_chart3.png "bi") 
   <br/><br/>
   
- The chart is now published and it can be accessed on line :http://148.251.52.10:8088/superset/dashboard/12 (admin/admin)
+ The chart is now published and it can be accessed on line :
+ 
+ http://148.251.52.10:8088/superset/dashboard/12 (admin/admin)
  
  
   <br/><br/>

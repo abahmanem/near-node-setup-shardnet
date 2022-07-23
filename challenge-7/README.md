@@ -94,5 +94,116 @@ We are going to populate these two tables using a node js script that does calls
 
 ## Node JS
 
-  npm install pg
+  *  install  nodejs modules pg and request
+  
+  
+  ```bash
+   npm install pg
+   npm install request
+   
+  ```
+  
+  
+  * Create a script to  perdiodically load data from RPC call.
+  
+    ```bash
+  sudo vim loadDatas.js   
+  ```
+  
+  The source can be found here :  https://github.com/abahmanem/near-node-setup-shardnet/blob/main/challenge-7/loadDatas.js
+  
+  * Run the script : 
+  
+  ```bash
+  sudo node loadDatas.js   
+  ```
+  
+  Check data has been loaded into the 2 tables : 
+  
+  
+  <br/><br/>
+  ![bi](../assets/bi/current_val_data.png "bi") 
+  <br/><br/>
+  ![bi](../assets/bi/prev_epoch_kickout_data.png "bi") 
+  <br/><br/>
+  
+  
+  
+  
+  ## Apache SuperSet
+  
+  Login to Apache SuperSet (admin/admin):
+  
+    <br/><br/>
+  ![bi](../assets/bi/superset_login.png "bi") 
+  <br/><br/>
+  
+  
+  * Add a database
+  Add teh database previously created :
+  
+      <br/><br/>
+  ![bi](../assets/bi/superset_db_1.png "bi") 
+  <br/><br/>
+  
+  Once done, it should appear in the list of databases
+      <br/><br/>
+  ![bi](../assets/bi/superset_db_2.png "bi") 
+  <br/><br/>
+  
+  * Add datasets
+  
+  Add two dataset : one for  current_validators and one for prev_epoch_kickout
+  
+       <br/><br/>
+  ![bi](../assets/bi/add_dataset.png "bi") 
+  <br/><br/>
+  
+  
+  * Create a Dashboard
+  
+  Add a dashboard to put in our charts
+  
+         <br/><br/>
+  ![bi](../assets/bi/add_dashboard.png "bi") 
+  <br/><br/>
+  
+  
+  
+  
+  * Add charts 
+  
+  1- Lets add a chart representing the average stake per validator at a given time :
+  
+  For this chart, we are going to use a Pie chart and the table current_validators to collect datas:
+  
+  <br/><br/>
+  ![bi](../assets/bi/add_chart.png "bi") 
+  <br/><br/>
+  
+  
+  then in the following page:
+  
+  - put **account_id** in dimentions
+  
+  - for Metrics : select **stake** field and **AVG** function
+  
 
+
+ <br/><br/>
+  ![bi](../assets/bi/add_chart1.png "bi") 
+  <br/><br/>
+
+  Click Save
+  
+ The chart will then be created and updated accordingly :
+ 
+ 
+ 
+  <br/><br/>
+  ![bi](../assets/bi/add_chart2.png "bi") 
+  <br/><br/>
+  
+  
+ 
+ 

@@ -206,4 +206,17 @@ We are going to populate these two tables using a node js script that does calls
   
   
  
+ Save the chart to the dashboad :
  
+  <br/><br/>
+  ![bi](../assets/bi/add_chart3.png "bi") 
+  <br/><br/>
+  
+ The chart is now published and it can be accessed on line :
+ 
+ 
+  <br/><br/>
+  ![bi](../assets/bi/dashboard.png "bi") 
+  <br/><br/>
+ 
+  

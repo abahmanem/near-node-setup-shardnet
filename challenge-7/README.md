@@ -140,7 +140,7 @@ We are going to populate these two tables using a node js script that does calls
   
   
   
-  ## Apache SuperSet
+  ## Create Charts in Apache SuperSet
   
   Login to Apache SuperSet (admin/admin):
   
@@ -178,8 +178,7 @@ We are going to populate these two tables using a node js script that does calls
   ![bi](../assets/bi/add_dashboard.png "bi") 
   <br/><br/>
   
-  
-  
+    
   
   * Add charts 
   

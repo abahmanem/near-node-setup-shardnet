@@ -3,7 +3,7 @@ In this challenge, we are going to produce some charts using the data from the s
 
 We are going to use RPC call to fetch datas frequently so the charts data keeps up to date.
 
-We will use [Apache superSet](https://superset.apache.org/) as data exploration and visualization tool. 
+We will use [Apache Superset](https://superset.apache.org/) as data exploration and visualization tool. 
 
 **In this guide, we load datas from RPC endpoint every 1 hour to have more datas, but we will switch it to one Epoch in the futur to be more reprsentative of the reality**
 
@@ -49,7 +49,7 @@ sudo docker-compose -f docker-compose-non-dev.yml up -d
 
 ## Create postgresql BI Tables
 
-We will use postgresql to creates table that Apache superSet will use to explore 
+We will use postgresql to creates table that Apache Superset will use to explore 
 
 
 Connect to postgresql 

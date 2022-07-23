@@ -225,22 +225,20 @@ We are going to populate these two tables using a node js script that does calls
   
   ## Thoughts on STAKE_DISTRIBUTION_DECENTRALIZATION chart:
   
-    - This chart shows that one of the trilema that the POS blockchain tries to solve is broken: Decentralization, a few nodes have more than 60% of the total stake.
+    This chart shows that one of the trilema that the POS blockchain tries to solve is broken: Decentralization, a few nodes have more than 60% of the total stake.
     
-    If they go offline at the same time, the network may broke.
-    
-    This is not healthy for the netowrk.
+    If they go offline at the same time, the network may broke and this is not healthy for the netowrk.
     
     Solutions :
     
-    - Cap the total stake per node if faisible.
+     * Cap the total stake per node if faisible.
     
-    - Cap the number of delegaotr per node  : no more than 1000 delegator per node, an error message can be thrown when a delegator tries to delegate
+     * Cap the number of delegaotr per node (at least temporarilly) : no more than 1000 delegator per node, an error message can be thrown when a delegator tries to delegate
     to a node that has reached the treshold of 1000 delegator.
     
-    -On board more nodes in the netword.
+    * On board more nodes in the netword.
     
-    - The Near team or the foundation managing the Near tokens can stake more on the little nodes to promote decentralization.
+    * The Near team or the foundation managing the Near tokens can stake more on the little nodes to promote decentralization.
     
     
     

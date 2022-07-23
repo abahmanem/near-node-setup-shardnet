@@ -180,9 +180,9 @@ We are going to populate these two tables using a node js script that does calls
   
     
   
-  * Add charts 
+# Charts 
   
-  1- Lets add a chart representing the average stake per validator at a given time :
+  ## Chart 1 : chart representing the average stake per validator at a given time :
   
   For this chart, we are going to use a Pie chart and the table current_validators to collect datas:
   
@@ -263,6 +263,18 @@ We are going to populate these two tables using a node js script that does calls
  * For the 200-300 nodes that will be added to network as per StakeWars 3 phase, promote and advertize these nodes.  
 
  
-     
-     
+  ## Chart 2 : Evolution of block creation over time
+  
+  
+  This chart shows how total produced blocks evolves throught time, it can give an idea about the network health and the amount of transactions.
+  
+  
+  
+  ## Chart 2 : Slashing
+  
+  This chart shows statistics about slashing among nodes. We an see which nodes are often slashed overt time.
+  This can give an idea about node maintenance.
+  We can communicate and support these node operators to help them join the network quickly.
+  
+  
     

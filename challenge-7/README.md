@@ -230,11 +230,11 @@ We are going to populate these two tables using a node js script that does calls
   We can also add filter to the online chart.
  
  
- ## sfsdf
+ ### Thoughts on STAKE_DISTRIBUTION_DECENTRALIZATION chart
  
  This chart shows that one of the trilemas that the POS blockchain tries to solve is broken:Decentralization.
     
- few nodes have more than 80% of the total stake.
+ A few nodes have more than 80% of the total stake.
     
  If they go offline at the same time, the network may broke and this is not healthy for the netowrk.
     
@@ -248,9 +248,7 @@ We are going to populate these two tables using a node js script that does calls
     
  * The Near team or the foundation managing the Near tokens can stake more on the little nodes to promote decentralization.
 
-
-dfgfdg
-  
+ 
      
      
     

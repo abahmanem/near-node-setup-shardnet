@@ -223,9 +223,9 @@ We are going to populate these two tables using a node js script that does calls
  You can also add filter to the online chart
   
   
-  ** Thougnts on STAKE_DISTRIBUTION_DECENTRALIZATION chart:
+  ## Thoughts on STAKE_DISTRIBUTION_DECENTRALIZATION chart:
   
-    - This chart show that one of the trilema that the POS blockchain tries to solve : Decentralization, a few nodes have more than 60% of the total stake.
+    - This chart shows that one of the trilema that the POS blockchain tries to solve is broken: Decentralization, a few nodes have more than 60% of the total stake.
     
     If they go offline at the same time, the network may broke.
     

@@ -238,15 +238,15 @@ We are going to populate these two tables using a node js script that does calls
     
  If they go offline at the same time, the network may broke and this is not healthy for the netowrk.
     
-    Solutions :
+ Recommendations :
     
-     * Cap the total stake per node if faisible.
+ * Cap the total stake per node if faisible.
+ 
+ * Cap the number of delegators per node (at least temporarilly) : no more than 1000 delegator per node, an error message can be thrown when a 		delegator tries to delegate to a node that has reached the treshold of 1000 delegators.
     
-     * Cap the number of delegators per node (at least temporarilly) : no more than 1000 delegator per node, an error message can be thrown when a 		delegator tries to delegate to a node that has reached the treshold of 1000 delegators.
+ * Onboard more nodes in the netword. Lower the price seat.
     
-    * On board more nodes in the netword.
-    
-    * The Near team or the foundation managing the Near tokens can stake more on the little nodes to promote decentralization.
+ * The Near team or the foundation managing the Near tokens can stake more on the little nodes to promote decentralization.
 
 
 dfgfdg

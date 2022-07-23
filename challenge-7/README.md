@@ -229,6 +229,16 @@ We are going to populate these two tables using a node js script that does calls
   <br/><br/>
   
   The chart will update continously as new data are injected in the database.
+ 
+  You can refresh the charts anytime to load current datas. 
+  
+  You can alos choose fullscreen mode.
+  
+   <br/><br/>
+  ![bi](../assets/bi/dashboard1.png "bi") 
+  <br/><br/>
+  
+  
   We can also add filter to the online chart.
  
  

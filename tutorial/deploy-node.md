@@ -346,7 +346,7 @@ In the following sections, **It's recommended** to run the commands  as a non-ro
   Which account did you authorize for use with NEAR CLI?
   Enter it here (if not redirected automatically):
   ait-belhaj.shardnet.near
-  Logged in as [ aitbelhaj.shardnet.near ] with public key [ ed25519:ATjazw... ] successfully
+  Logged in as [ ait-belhaj.shardnet.near ] with public key [ ed25519:ATjazw... ] successfully
  ````
 
  * Check the validator_key.json

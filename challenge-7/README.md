@@ -5,6 +5,8 @@ We are going to use RPC call to fetch datas frequently so the charts data keeps 
 
 We will use [Apache superSet](https://superset.apache.org/) as data exploration and visualization tool. 
 
+**In this guide, we load datas from RPC endpoint every 1 hour to have more datas, but we will switch it to one Epoch in the futur to be more reprsentative of the reality**
+
 ## Install Apache superSet
  
   Clone Superset's repo 

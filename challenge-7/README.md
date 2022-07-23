@@ -225,29 +225,18 @@ We are going to populate these two tables using a node js script that does calls
   <br/><br/>
   ![bi](../assets/bi/dashboard.png "bi") 
   <br/><br/>
- 
   
-    This chart shows that one of the trilemas that the POS blockchain tries to solve is broken:Decentralization.
-    
-    A few nodes have more than 80% of the total stake.
-    
-    If they go offline at the same time, the network may broke and this is not healthy for the netowrk.
-    
-    Solutions :
-    
-     * Cap the total stake per node if faisible.
-    
-     * Cap the number of delegators per node (at least temporarilly) : no more than 1000 delegator per node, an error message can be thrown when a delegator tries to delegate
-    to a node that has reached the treshold of 1000 delegators.
-    
-    * On board more nodes in the netword.
-    
-    * The Near team or the foundation managing the Near tokens can stake more on the little nodes to promote decentralization.
-    
+  The chart will update continously as new data are injected in the database.
+  We can also add filter to the online chart.
  
- The chart will update continously as new data are injected in the database.
- We can also add filter to the online chart.
-  
+ 
+ ## sfsdf
+ 
+ dfgdfg
+ dfgdfg
+ 
+ dfgdfgdf
+ dfgfdg
   
      
      

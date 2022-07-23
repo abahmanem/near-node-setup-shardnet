@@ -116,7 +116,7 @@ We are going to populate these two tables using a node js script that does calls
   
   * Create a script to  perdiodically load data from RPC call.
   
-    ```bash
+  ```bash
   sudo vim loadDatas.js   
   ```
   
@@ -165,7 +165,7 @@ We are going to populate these two tables using a node js script that does calls
   
   Add two dataset : one for  current_validators and one for prev_epoch_kickout
   
-       <br/><br/>
+  <br/><br/>
   ![bi](../assets/bi/add_dataset.png "bi") 
   <br/><br/>
   
@@ -174,7 +174,7 @@ We are going to populate these two tables using a node js script that does calls
   
   Add a dashboard to put in our charts
   
-         <br/><br/>
+  <br/><br/>
   ![bi](../assets/bi/add_dashboard.png "bi") 
   <br/><br/>
   
@@ -207,8 +207,7 @@ We are going to populate these two tables using a node js script that does calls
   
  The chart will then be created and updated accordingly :
  
- 
- 
+  
   <br/><br/>
   ![bi](../assets/bi/add_chart2.png "bi") 
   <br/><br/>
@@ -232,9 +231,9 @@ We are going to populate these two tables using a node js script that does calls
   
   
   
-  ## Thoughts on STAKE_DISTRIBUTION_DECENTRALIZATION chart
+ 
   
-    This chart shows that one of the trilema that the POS blockchain tries to solve is broken:Decentralization.
+    This chart shows that one of the trilemas that the POS blockchain tries to solve is broken:Decentralization.
     
     A few nodes have more than 80% of the total stake.
     

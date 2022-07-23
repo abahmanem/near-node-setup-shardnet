@@ -221,7 +221,7 @@ We are going to populate these two tables using a node js script that does calls
   
  The chart is now published and it can be accessed on line :
  
- http://148.251.52.10:8088/superset/dashboard/12 (admin/admin)
+ http://148.251.52.10:8088/superset/dashboard/13 (admin/admin)
  
  
   <br/><br/>

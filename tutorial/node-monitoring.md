@@ -107,7 +107,7 @@ Jul 19 22:05:21 Ubuntu-2004-focal-64-minimal neard[2918447]: 2022-07-19T20:05:21
  
  ```bash
  aitbelhaj@Ubuntu-2004-focal-64-minimal ~ # near validators current | awk '/ait-belhaj.factory.shardnet.near/ {print $4}'
-45,317
+1930
  
  ```
  

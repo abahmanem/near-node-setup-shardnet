@@ -79,3 +79,29 @@ NEAR_ENV=shardnet near call $CONTRACT_ID withdraw '{}' --accountId $CONTRACT_ID 
 
 
 
+Account after setting up : 
+
+the owner account has a balance of : 1304 Near ,
+
+
+ <br/>
+
+   ![split](../assets/split/account_0.png "split")
+<br/>
+
+and the staking pool has a very small balance : 
+
+ <br/>
+
+   ![split](../assets/split/pool_id_account_0.png "split")
+<br/>
+
+
+
+lets wait until it gets some rewards ans  try to withdraw  then to owner account with this command:
+
+ ```bash
+CONTRACT_ID=ait-belhaj.shardnet.near
+NEAR_ENV=shardnet near call $CONTRACT_ID withdraw '{}' --accountId $CONTRACT_ID --gas 200000000000000
+```
+

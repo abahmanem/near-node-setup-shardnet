@@ -41,10 +41,9 @@ NEAR_ENV=shardnet near deploy ait-belhaj.shardnet.near --wasmFile target/wasm32-
 
 This will result in the following output
 
- <br/><br/>
-
+<br/>
    ![split](../assets/split/deploy-contract.png "split")
-<br/><br/
+<br/>
 
 * Initialize the smart contract picking accounts for splitting revenue.
 
@@ -62,11 +61,10 @@ We are splitting rewards :
 - 30% to account breakin.shardnet.near
 
 
- <br/><br/>
+ <br/>
 
    ![split](../assets/split/splitting.png "split")
-<br/><br/
-
+<br/>
 
 * We wait until we start receiving rewards on your node staking pool then we will withdraw them to our account.
 

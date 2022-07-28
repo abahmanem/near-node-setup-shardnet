@@ -79,7 +79,7 @@ NEAR_ENV=shardnet near call $CONTRACT_ID withdraw '{}' --accountId $CONTRACT_ID 
 
 
 
-Account after setting up : 
+Account after setting up (date 2022-07-28): 
 
 the owner account has a balance of : 1304 Near ,
 

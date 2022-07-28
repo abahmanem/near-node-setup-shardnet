@@ -45,6 +45,7 @@ This will result in the following output
    ![split](../assets/split/deploy-contract.png "split")
 <br/>
 
+
 * Initialize the smart contract picking accounts for splitting revenue.
 
 

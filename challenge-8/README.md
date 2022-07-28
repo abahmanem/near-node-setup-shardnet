@@ -41,7 +41,9 @@ NEAR_ENV=shardnet near deploy ait-belhaj.shardnet.near --wasmFile target/wasm32-
 
 This will result in the following output
 
-<br/>
+
+ <br/>
+
    ![split](../assets/split/deploy-contract.png "split")
 <br/>
 
